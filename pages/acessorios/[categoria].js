@@ -15,7 +15,9 @@ const Categoria = ({ data }) => {
     <div>
       <ul>
         {currentAcessorio.map(acessorio => (
-          <li key={acessorio._id}>{acessorio.nome}</li>
+          <li key={acessorio._id}>
+            {acessorio.nome} - R${acessorio.preco}
+          </li>
         ))}
       </ul>
     </div>

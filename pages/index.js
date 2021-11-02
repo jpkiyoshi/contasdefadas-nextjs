@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className="max-w-6xl bg-pink-300">
       <Link href="/acessorios/pulseiras">Pulseiras</Link> <br />
       <Link href="/acessorios/colares">Colares / Chokers</Link>
       <br />
