@@ -4,9 +4,22 @@ import sanityClient from '@sanity/client';
 const Categoria = ({ data }) => {
   const router = useRouter();
   const { categoria } = router.query;
-  console.log(data);
 
-  return <div>{categoria}</div>;
+  const currentAcessorio = data.filter(
+    acessorio => acessorio.slug === categoria
+  );
+
+  console.log(currentAcessorio);
+
+  return (
+    <div>
+      <ul>
+        {currentAcessorio.map(acessorio => (
+          <li key={acessorio._id}>{acessorio.nome}</li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export const getStaticPaths = async () => {
@@ -36,6 +49,7 @@ export async function getStaticProps() {
     _id,
     nome,
     "categoria": categoria->categoria,
+    "slug": categoria->slug.current,
     "imagem": imagem.asset->url,
     descricao,
     preco
