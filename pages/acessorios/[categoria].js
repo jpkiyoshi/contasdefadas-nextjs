@@ -1,18 +1,22 @@
 import { useRouter } from 'next/router';
 import sanityClient from '@sanity/client';
 
+import Layout from '../../components/Layout';
+
 const Categoria = ({ data }) => {
 
   return (
-    <div>
-      <ul>
-        {data.map(acessorio => (
-          <li key={acessorio._id}>
-            {acessorio.nome} - R${acessorio.preco}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Layout>
+      <div>
+        <ul>
+          {data.map(acessorio => (
+            <li key={acessorio._id}>
+              {acessorio.nome} - R${acessorio.preco}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Layout>
   );
 };
 
