@@ -2,19 +2,11 @@ import { useRouter } from 'next/router';
 import sanityClient from '@sanity/client';
 
 const Categoria = ({ data }) => {
-  const router = useRouter();
-  const { categoria } = router.query;
-
-  const currentAcessorio = data.filter(
-    acessorio => acessorio.slug === categoria
-  );
-
-  console.log(currentAcessorio);
 
   return (
     <div>
       <ul>
-        {currentAcessorio.map(acessorio => (
+        {data.map(acessorio => (
           <li key={acessorio._id}>
             {acessorio.nome} - R${acessorio.preco}
           </li>
@@ -38,7 +30,9 @@ export const getStaticPaths = async () => {
   };
 };
 
-export async function getStaticProps() {
+export async function getStaticProps( {params} ) {
+  const category  = params.categoria;
+
   const client = sanityClient({
     projectId: '4nd9464x',
     dataset: 'production',
@@ -47,7 +41,7 @@ export async function getStaticProps() {
     useCdn: false // `false` if you want to ensure fresh data
   });
 
-  const query = `*[_type == "acessorio"] | order(_createdAt) {
+  const query = `*[_type == "acessorio" && categoria._ref in *[slug.current == "${category}"]._id] | order(_createdAt) {
     _id,
     nome,
     "categoria": categoria->categoria,
@@ -58,6 +52,8 @@ export async function getStaticProps() {
   }`;
 
   const result = await client.fetch(query);
+
+  console.log(result);
 
   return {
     props: {
