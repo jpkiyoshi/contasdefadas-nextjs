@@ -6,8 +6,8 @@ module.exports = {
     extend: {
       colors: {
         'contas-pink-main': '#ff9a8b',
-        'contas-pink-dark': '#ff6a88',
-        'contas-pink-light': '#ff99ac',
+        'contas-pink-dark': '#B35A6A',
+        'contas-pink-light': '#FFB4C2',
         'contas-purple-dark': '#56001e'
       },
       fontFamily: {

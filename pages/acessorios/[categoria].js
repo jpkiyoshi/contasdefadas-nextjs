@@ -3,7 +3,6 @@ import client from '../../sanity/client';
 import Layout from '../../components/Layout';
 
 const Categoria = ({ data }) => {
-
   return (
     <Layout>
       <div>
@@ -33,8 +32,8 @@ export const getStaticPaths = async () => {
   };
 };
 
-export async function getStaticProps( {params} ) {
-  const category  = params.categoria;
+export async function getStaticProps({ params }) {
+  const category = params.categoria;
 
   const query = `*[_type == "acessorio" && categoria._ref in *[slug.current == "${category}"]._id] | order(_createdAt) {
     _id,
