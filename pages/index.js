@@ -1,3 +1,4 @@
+import Hero from '../components/Hero';
 import HomeCards from '../components/HomeCards';
 
 import Layout from '../components/Layout';
@@ -5,6 +6,7 @@ import Layout from '../components/Layout';
 export default function Home() {
   return (
     <Layout>
+      <Hero />
       <HomeCards
         isInversed
         slug="/pulseiras"
