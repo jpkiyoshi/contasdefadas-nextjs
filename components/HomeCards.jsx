@@ -4,8 +4,8 @@ const HomeCards = ({ isInversed, description, imgUrl, title }) => {
   return (
     <>
       {isInversed ? (
-        <section className="grid w-screen h-screen grid-cols-2 bg-contas-purple-dark">
-          <div className="relative">
+        <section className="grid w-screen grid-cols-1 md:h-screen md:grid-cols-2 bg-contas-purple-dark">
+          <div className="relative h-96 md:h-auto">
             <Image src={imgUrl} layout="fill" objectFit="cover" />
           </div>
           <div className="grid items-center p-20">
@@ -20,7 +20,7 @@ const HomeCards = ({ isInversed, description, imgUrl, title }) => {
           </div>
         </section>
       ) : (
-        <section className="grid w-screen h-screen grid-cols-2 bg-contas-pink-light">
+        <section className="grid w-screen grid-cols-1 md:h-screen md:grid-cols-2 bg-contas-pink-light">
           <div className="grid items-center p-20">
             <div>
               <h2 className="mb-10 text-6xl font-bold text-contas-purple-dark">
@@ -31,7 +31,7 @@ const HomeCards = ({ isInversed, description, imgUrl, title }) => {
               </p>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative order-first h-96 md:h-auto md:order-none">
             <Image src={imgUrl} layout="fill" objectFit="cover" />
           </div>
         </section>
