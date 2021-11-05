@@ -17,10 +17,10 @@ const HomeCards = ({ isInversed, description, imgUrl, title, slug }) => {
           <div className="grid items-center p-10 mb-10 md:p-20">
             <Link href={`acessorios/${slug}`}>
               <div className="cursor-pointer">
-                <h2 className="mb-10 text-6xl font-bold text-contas-pink-light">
+                <h2 className="mb-10 text-5xl font-bold md:text-6xl text-contas-pink-light">
                   {title}
                 </h2>
-                <p className="font-serif text-2xl text-contas-pink-dark">
+                <p className="font-serif text-xl md:text-2xl text-contas-pink-dark">
                   {description}
                 </p>
               </div>
@@ -32,10 +32,10 @@ const HomeCards = ({ isInversed, description, imgUrl, title, slug }) => {
           <div className="grid items-center p-10 mb-10 md:p-20">
             <Link href={`acessorios/${slug}`}>
               <div className="cursor-pointer">
-                <h2 className="mb-10 text-6xl font-bold text-contas-purple-dark">
+                <h2 className="mb-10 text-5xl font-bold md:text-6xl text-contas-purple-dark">
                   {title}
                 </h2>
-                <p className="font-serif text-2xl text-contas-pink-dark">
+                <p className="font-serif text-xl md:text-2xl text-contas-pink-dark">
                   {description}
                 </p>
               </div>

@@ -15,7 +15,7 @@ const Logo = () => (
 
 const NavBarLink = ({ linkName, href }) => (
   <Link href={href} locale={false}>
-    <a className="flex items-center px-3 py-2 leading-snug text-contas-pink-main hover:text-contas-pink-dark">
+    <a className="flex items-center px-3 py-2 leading-snug text-contas-pink-light hover:text-contas-pink-dark">
       <span className="ml-2">{linkName}</span>
     </a>
   </Link>
