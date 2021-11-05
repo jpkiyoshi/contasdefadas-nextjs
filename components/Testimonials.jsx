@@ -39,9 +39,9 @@ const Testimonials = () => {
                 </div>
               </div>
               <blockquote className="mt-8 text-lg text-contas-pink-light text-opacity-80">
-                "This is a no-brainer if you want to take your business to the
-                next level. If you are looking for the ultimate toolset, this is
-                it!"
+                &quot;This is a no-brainer if you want to take your business to
+                the next level. If you are looking for the ultimate toolset,
+                this is it!&quot;
               </blockquote>
             </div>
             <div className="flex flex-col items-start justify-start w-full h-auto px-0 mx-0 mb-12 border-l border-r border-transparent lg:w-1/3 lg:mb-0 lg:px-8 lg:mx-8 lg:border-gray-200">
@@ -64,8 +64,8 @@ const Testimonials = () => {
                 </div>
               </div>
               <blockquote className="mt-8 text-lg text-contas-pink-light text-opacity-80">
-                "Thanks for creating this service. My life is so much easier.
-                Thanks for making such a great product."
+                &quot;Thanks for creating this service. My life is so much
+                easier. Thanks for making such a great product.&quot;
               </blockquote>
             </div>
             <div className="flex flex-col items-start justify-start w-full h-auto lg:w-1/3">
@@ -88,8 +88,8 @@ const Testimonials = () => {
                 </div>
               </div>
               <blockquote className="mt-8 text-lg text-contas-pink-light text-opacity-80">
-                "Packed with awesome content and exactly what I was looking for.
-                I would highly recommend this to anyone."
+                &quot;Packed with awesome content and exactly what I was looking
+                for. I would highly recommend this to anyone.&quot;
               </blockquote>
             </div>
           </div>
