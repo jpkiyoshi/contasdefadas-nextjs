@@ -15,5 +15,5 @@ const heroStyles = {
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: `url("https://res.cloudinary.com/jpkiyoshi/image/upload/v1636144894/IMG_3222_yq6f39.png")`
+  backgroundImage: `url("https://res.cloudinary.com/jpkiyoshi/image/upload/v1636148831/IMG_3222_dseq1r.png")`
 };
