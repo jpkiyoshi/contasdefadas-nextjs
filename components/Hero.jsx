@@ -3,7 +3,7 @@ import HeroBackground from './HeroBackground';
 const Hero = () => {
   return (
     <HeroBackground>
-      <div className="p-6 md:p-10">
+      <div className="p-6 mt-20 md:mt-0 md:p-10">
         <h1 className="text-6xl font-extrabold leading-none mb-7 md:text-7xl text-contas-purple-dark">
           Trazemos a magia até você
         </h1>
