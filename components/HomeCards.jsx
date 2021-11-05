@@ -11,7 +11,7 @@ const HomeCards = ({ isInversed, description, imgUrl, title, slug }) => {
         >
           <Link href={`acessorios/${slug}`}>
             <div className="relative cursor-pointer h-96 md:h-auto">
-              <Image src={imgUrl} layout="fill" objectFit="cover" />
+              <Image src={imgUrl} layout="fill" objectFit="cover" alt={slug} />
             </div>
           </Link>
           <div className="grid items-center p-20">
@@ -43,7 +43,7 @@ const HomeCards = ({ isInversed, description, imgUrl, title, slug }) => {
           </div>
           <Link href={`acessorios/${slug}`}>
             <div className="relative order-first cursor-pointer h-96 md:h-auto md:order-none">
-              <Image src={imgUrl} layout="fill" objectFit="cover" />
+              <Image src={imgUrl} layout="fill" objectFit="cover" alt={slug} />
             </div>
           </Link>
         </section>

@@ -9,6 +9,7 @@ const Logo = () => (
     width="133"
     height="75"
     responsive="true"
+    alt="Contas de Fadas logo"
   />
 );
 
