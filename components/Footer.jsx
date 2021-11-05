@@ -8,7 +8,7 @@ const Footer = () => {
               href="#"
               className="text-base leading-6 text-opacity-70 text-contas-pink-light hover:text-gray-900"
             >
-              Sobre nós
+              Quem somos
             </a>
           </div>
           <div className="px-5 py-2">
