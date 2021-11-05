@@ -30,7 +30,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 border-b bg-contas-purple-dark ">
       <nav>
         <div className="container flex flex-wrap items-center justify-between m-auto lg:max-w-full lg:w-11/12 lg:flex-nowrap">
-          <div className="relative flex justify-between w-full lg:w-auto lg:static lg:block lg:justify-start">
+          <div className="relative flex justify-between w-full py-1 lg:w-auto lg:static lg:block lg:justify-start">
             <Link href="/">
               <a className="ml-auto mr-auto">
                 <Logo />
