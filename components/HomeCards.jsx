@@ -14,7 +14,7 @@ const HomeCards = ({ isInversed, description, imgUrl, title, slug }) => {
               <Image src={imgUrl} layout="fill" objectFit="cover" alt={slug} />
             </div>
           </Link>
-          <div className="grid items-center p-20">
+          <div className="grid items-center p-10 mb-10 md:p-20">
             <Link href={`acessorios/${slug}`}>
               <div className="cursor-pointer">
                 <h2 className="mb-10 text-6xl font-bold text-contas-pink-light">
@@ -29,7 +29,7 @@ const HomeCards = ({ isInversed, description, imgUrl, title, slug }) => {
         </section>
       ) : (
         <section className="grid w-screen grid-cols-1 md:h-screen md:grid-cols-2 bg-contas-pink-light">
-          <div className="grid items-center p-20">
+          <div className="grid items-center p-10 mb-10 md:p-20">
             <Link href={`acessorios/${slug}`}>
               <div className="cursor-pointer">
                 <h2 className="mb-10 text-6xl font-bold text-contas-purple-dark">
