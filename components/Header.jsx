@@ -6,8 +6,8 @@ import React from 'react';
 const Logo = () => (
   <Image
     src="https://res.cloudinary.com/jpkiyoshi/image/upload/v1636059714/Site_-_Header_-_Logo_bg4lh8.png"
-    width="133"
-    height="75"
+    width="106"
+    height="60"
     responsive="true"
     alt="Contas de Fadas logo"
   />
