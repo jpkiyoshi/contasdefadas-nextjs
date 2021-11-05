@@ -37,7 +37,7 @@ const Header = () => {
               </a>
             </Link>
             <button
-              className="absolute right-0 block px-3 py-1 text-xl leading-none border border-transparent border-solid rounded outline-none cursor-pointer top-5 lg:hidden focus:outline-none"
+              className="absolute right-0 block px-3 py-1 text-xl leading-none border border-transparent border-solid rounded outline-none cursor-pointer top-3 lg:hidden focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
