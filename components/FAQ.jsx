@@ -11,7 +11,7 @@ const FAQ = () => {
         <Disclosure>
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-3xl font-medium text-left rounded-lg bg-contas-pink-light text-contas-purple-dark hover:bg-contas-pink-light focus:outline-none focus-visible:ring focus-visible:contas-purple-dark focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-2xl font-medium text-left rounded-lg md:text-3xl bg-contas-pink-light text-contas-purple-dark hover:bg-contas-pink-light focus:outline-none focus-visible:ring focus-visible:contas-purple-dark focus-visible:ring-opacity-75">
                 <span>Lorem ipsum dolor sit amet?</span>
                 <ChevronUpIcon
                   className={`${
@@ -27,7 +27,7 @@ const FAQ = () => {
                 leaveFrom="transform scale-100 opacity-100"
                 leaveTo="transform scale-95 opacity-0"
               >
-                <Disclosure.Panel className="px-4 pt-4 pb-2 text-2xl text-contas-pink-light">
+                <Disclosure.Panel className="px-4 pt-4 pb-2 text-xl md:text-2xl text-contas-pink-light">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
                   nostrum repellat officia dolor fugit voluptatum ipsum minima
                   assumenda quo magnam.
@@ -39,7 +39,7 @@ const FAQ = () => {
         <Disclosure as="div" className="mt-2">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-3xl font-medium text-left rounded-lg bg-contas-pink-light text-contas-purple-dark hover:bg-contas-pink-light focus:outline-none focus-visible:ring focus-visible:contas-purple-dark focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-2xl font-medium text-left rounded-lg md:text-3xl bg-contas-pink-light text-contas-purple-dark hover:bg-contas-pink-light focus:outline-none focus-visible:ring focus-visible:contas-purple-dark focus-visible:ring-opacity-75">
                 <span>Lorem ipsum dolor sit amet?</span>
                 <ChevronUpIcon
                   className={`${
@@ -55,7 +55,7 @@ const FAQ = () => {
                 leaveFrom="transform scale-100 opacity-100"
                 leaveTo="transform scale-95 opacity-0"
               >
-                <Disclosure.Panel className="px-4 pt-4 pb-2 text-2xl text-contas-pink-light">
+                <Disclosure.Panel className="px-4 pt-4 pb-2 text-xl md:text-2xl text-contas-pink-light">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
                   nostrum repellat officia dolor fugit voluptatum ipsum minima
                   assumenda quo magnam.
@@ -67,7 +67,7 @@ const FAQ = () => {
         <Disclosure as="div" className="mt-2">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-3xl font-medium text-left rounded-lg bg-contas-pink-light text-contas-purple-dark hover:bg-contas-pink-light focus:outline-none focus-visible:ring focus-visible:contas-purple-dark focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-2xl font-medium text-left rounded-lg md:text-3xl bg-contas-pink-light text-contas-purple-dark hover:bg-contas-pink-light focus:outline-none focus-visible:ring focus-visible:contas-purple-dark focus-visible:ring-opacity-75">
                 <span>Lorem ipsum dolor sit amet?</span>
                 <ChevronUpIcon
                   className={`${
@@ -83,7 +83,7 @@ const FAQ = () => {
                 leaveFrom="transform scale-100 opacity-100"
                 leaveTo="transform scale-95 opacity-0"
               >
-                <Disclosure.Panel className="px-4 pt-4 pb-2 text-2xl text-contas-pink-light">
+                <Disclosure.Panel className="px-4 pt-4 pb-2 text-xl md:text-2xl text-contas-pink-light">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
                   nostrum repellat officia dolor fugit voluptatum ipsum minima
                   assumenda quo magnam.
