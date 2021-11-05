@@ -8,7 +8,7 @@ const Logo = () => (
     src="https://res.cloudinary.com/jpkiyoshi/image/upload/v1636059714/Site_-_Header_-_Logo_bg4lh8.png"
     width="133"
     height="75"
-    responsive
+    responsive="true"
   />
 );
 

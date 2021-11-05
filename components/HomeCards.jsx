@@ -5,7 +5,10 @@ const HomeCards = ({ isInversed, description, imgUrl, title, slug }) => {
   return (
     <>
       {isInversed ? (
-        <section className="grid w-screen grid-cols-1 md:h-screen md:grid-cols-2 bg-contas-purple-dark">
+        <section
+          className="grid w-screen grid-cols-1 md:h-screen md:grid-cols-2 bg-contas-purple-dark"
+          id="section"
+        >
           <Link href={`acessorios/${slug}`}>
             <div className="relative cursor-pointer h-96 md:h-auto">
               <Image src={imgUrl} layout="fill" objectFit="cover" />
