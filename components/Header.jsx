@@ -56,7 +56,7 @@ const Header = () => {
               navbarOpen ? ' flex' : ' hidden'
             }`}
           >
-            <ul className="flex flex-col text-lg list-none lg:flex-row md:text-sm lg:text-sm xl:text-base lg:ml-auto lg:items-center">
+            <ul className="flex flex-col text-lg font-medium list-none lg:flex-row md:text-sm lg:text-sm xl:text-base lg:ml-auto lg:items-center">
               <li>
                 <NavBarLink linkName="Pulseiras" href="/acessorios/pulseiras" />
               </li>

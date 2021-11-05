@@ -38,6 +38,7 @@ const Footer = () => {
         </nav>
         <div className="flex justify-center mt-8 space-x-6">
           <a
+            rel="noreferrer"
             target="_blank"
             href="https://www.instagram.com/contasdefadas/"
             className="text-contas-pink-light text-opacity-70 hover:text-gray-500"
