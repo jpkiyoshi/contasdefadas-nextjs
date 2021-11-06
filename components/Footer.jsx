@@ -271,7 +271,7 @@ const AcceptedPayments = () => {
       </div>
       <div className="flex gap-1">
         <img
-          src="https://res.cloudinary.com/jpkiyoshi/image/upload/v1636225362/boleto-logo-1_av1l2q.png"
+          src="https://res.cloudinary.com/jpkiyoshi/image/upload/v1636225482/boleto-logo-1_psgo1k.png"
           alt="boleto"
         />
         <img
