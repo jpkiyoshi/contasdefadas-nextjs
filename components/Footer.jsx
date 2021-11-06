@@ -193,32 +193,32 @@ const AcceptedPayments = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M20.02 6.025A9.955 9.955 0 0122 12c0 5.522-4.478 10-10 10S2 17.522 2 12C2 6.477 6.478 2 12 2a9.988 9.988 0 018.02 4.025z"
             fill="#050013"
           ></path>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M7.703 9.32a3.074 3.074 0 012.988 2.35l-1.238.543v-.003l-1.268.557-3.04 1.328a3.074 3.074 0 012.56-4.776h-.002zm1.32 1.91l-3.07 1.323a1.758 1.758 0 013.07-1.322v-.001zm.828 3.361c-1.101 1.044-2.557 1.146-3.835.37l.722-1.099c.728.435 1.46.364 2.194-.211l.92.94zm1.25-.761l-.007-5.81h1.101v5.654c0 .053.007.101.078.13l.957.372-.43 1.122-1.123-.475c-.425-.18-.574-.44-.574-.993"
             fill="#fff"
           ></path>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M15.248 13.732a1.75 1.75 0 01-.132-2.656l-.712-1.153a3.088 3.088 0 00.172 4.976l.672-1.167"
             fill="#009DD7"
           ></path>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M15.73 10.697a1.755 1.755 0 012.235 1.032l1.362-.113a3.093 3.093 0 00-4.166-2.133l.569 1.214"
             fill="#FFF200"
           ></path>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M18.075 12.433a1.754 1.754 0 01-2.18 1.616l-.534 1.237a3.089 3.089 0 004.05-2.811l-1.336-.042z"
             fill="#E33206"
           ></path>
@@ -270,8 +270,14 @@ const AcceptedPayments = () => {
         </svg>
       </div>
       <div className="flex gap-1">
-        <img src="https://res.cloudinary.com/jpkiyoshi/image/upload/v1636225362/boleto-logo-1_av1l2q.png" />
-        <img src="https://res.cloudinary.com/jpkiyoshi/image/upload/v1636225482/pix-bc-logo_klhjgp.png" />
+        <img
+          src="https://res.cloudinary.com/jpkiyoshi/image/upload/v1636225362/boleto-logo-1_av1l2q.png"
+          alt="boleto"
+        />
+        <img
+          src="https://res.cloudinary.com/jpkiyoshi/image/upload/v1636225482/pix-bc-logo_klhjgp.png"
+          alt="PIX"
+        />
       </div>
     </div>
   );
