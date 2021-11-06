@@ -13,7 +13,7 @@ const Hero = () => {
       </div>
 
       <a
-        href="#section"
+        href="#acessorios"
         className="px-6 py-4 mb-32 text-lg font-bold text-white rounded md:mb-9 lg:text-2xl text-opacity-80 bg-contas-purple-dark hover:bg-contas-pink-dark"
       >
         Veja nossos produtos

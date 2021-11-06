@@ -7,7 +7,7 @@ const HomeCards = ({ isInversed, description, imgUrl, title, slug }) => {
       {isInversed ? (
         <section
           className="grid w-screen grid-cols-1 md:h-screen md:grid-cols-2 bg-contas-purple-dark"
-          id="section"
+          id="acessorios"
         >
           <Link href={`acessorios/${slug}`}>
             <div className="relative cursor-pointer h-96 md:h-auto">
