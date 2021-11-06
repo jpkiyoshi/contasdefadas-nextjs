@@ -10,7 +10,7 @@ const heroStyles = {
   gap: '5rem',
   justifyContent: 'center',
   alignItems: 'center',
-  height: '90vh',
+  height: '92vh',
   width: '100vw',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',

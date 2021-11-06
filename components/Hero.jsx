@@ -14,7 +14,7 @@ const Hero = () => {
 
       <a
         href="#section"
-        className="px-6 py-4 mb-32 text-lg font-bold text-white rounded md:mb-9 lg:text-2xl text-opacity-80 bg-contas-purple-dark hover:bg-opacity-80"
+        className="px-6 py-4 mb-32 text-lg font-bold text-white rounded md:mb-9 lg:text-2xl text-opacity-80 bg-contas-purple-dark hover:bg-contas-pink-dark"
       >
         Veja nossos produtos
       </a>
