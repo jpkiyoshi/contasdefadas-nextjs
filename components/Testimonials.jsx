@@ -3,7 +3,7 @@ import Image from 'next/image';
 const Testimonials = () => {
   return (
     <section className="flex items-center justify-center py-20 bg-contas-purple-dark min-w-screen">
-      <div className="px-16 bg-contas-purple-dark">
+      <div className="px-8 bg-contas-purple-dark">
         <div className="container flex flex-col items-start mx-auto lg:items-center text-contas-pink-light ">
           <h2 className="relative flex items-start justify-start w-full max-w-3xl text-5xl font-bold lg:justify-center">
             <svg
@@ -38,7 +38,7 @@ const Testimonials = () => {
                   </p>
                 </div>
               </div>
-              <blockquote className="mt-8 text-lg text-contas-pink-light text-opacity-80">
+              <blockquote className="mt-8 text-xl text-contas-pink-light text-opacity-80">
                 &quot;This is a no-brainer if you want to take your business to
                 the next level. If you are looking for the ultimate toolset,
                 this is it!&quot;
@@ -63,7 +63,7 @@ const Testimonials = () => {
                   </p>
                 </div>
               </div>
-              <blockquote className="mt-8 text-lg text-contas-pink-light text-opacity-80">
+              <blockquote className="mt-8 text-xl text-contas-pink-light text-opacity-80">
                 &quot;Thanks for creating this service. My life is so much
                 easier. Thanks for making such a great product.&quot;
               </blockquote>
@@ -87,7 +87,7 @@ const Testimonials = () => {
                   </p>
                 </div>
               </div>
-              <blockquote className="mt-8 text-lg text-contas-pink-light text-opacity-80">
+              <blockquote className="mt-8 text-xl text-contas-pink-light text-opacity-80">
                 &quot;Packed with awesome content and exactly what I was looking
                 for. I would highly recommend this to anyone.&quot;
               </blockquote>

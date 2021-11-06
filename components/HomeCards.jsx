@@ -23,7 +23,7 @@ const HomeCards = ({ isInversed, description, imgUrl, title, slug }) => {
                 <p className="font-serif text-xl mb-9 md:text-2xl text-contas-pink-dark">
                   {description}
                 </p>
-                <p className="pb-8 text-xl font-semibold underline text-contas-contrast-light">
+                <p className="pb-8 text-xl font-semibold uppercase text-contas-contrast-light">
                   Ir para {title}{' '}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ const HomeCards = ({ isInversed, description, imgUrl, title, slug }) => {
                 <p className="font-serif text-xl mb-9 md:text-2xl text-contas-pink-dark ">
                   {description}
                 </p>
-                <p className="pb-8 text-xl font-semibold underline text-contas-purpe-dark ">
+                <p className="pb-8 text-xl font-semibold uppercase text-contas-purple-dark ">
                   Ir para {title}{' '}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
