@@ -4,14 +4,13 @@ import { useRouter } from 'next/router';
 
 import client from '../../sanity/client';
 import Layout from '../../components/Layout';
-import { useState, useEffect } from 'react';
 
 const Product = ({ productData }) => {
   const { name, slug, image, price } = productData;
 
   return (
     <div className="flex-col justify-center border items-left border-contas-pink-light rounded-xl hover:opacity-80">
-      <Link href={`/produtos/${name.toLowerCase().replace(' ', '-')}`}>
+      <Link href={`/produtos/${name.toLowerCase().replaceAll(' ', '-')}`}>
         <a>
           <Image src={image} height="500" width="500" />
           <div className="relative flex flex-col p-5 space-y-5">
@@ -34,10 +33,8 @@ const ProductShelf = ({ products }) => {
   );
 };
 
-const Categoria = ({ data, params }) => {
+const Categoria = ({ data }) => {
   const router = useRouter();
-  const { categoria } = router.query;
-
   // const productsPerPage = 6;
   // const [visibleProducts, setVisibleProducts] = useState(data.slice(0, productsPerPage));
   // const [seeMoreBtnVisible, setSeeMoreBtnVisible] = useState(true);
@@ -61,7 +58,7 @@ const Categoria = ({ data, params }) => {
     <Layout>
       <div className="container flex flex-col items-center justify-center m-auto mt-10">
         <h1 className="mb-5 text-4xl font-bold text-center capitalize text-contas-pink-main">
-          {categoria}
+          {data[0]?.category}
         </h1>
         <ProductShelf products={data} />
         {/* {seeMoreBtnVisible ? <button onClick={seeMoreHandler}>VER MAIS</button> : null} */}
@@ -73,11 +70,12 @@ const Categoria = ({ data, params }) => {
 export const getStaticPaths = async () => {
   return {
     paths: [
-      { params: { categoria: 'pulseiras' } },
       { params: { categoria: 'colares' } },
-      { params: { categoria: 'brincos' } },
+      { params: { categoria: 'pulseiras' } },
+      { params: { categoria: 'tornozeleiras' } },
       { params: { categoria: 'brincos' } },
       { params: { categoria: 'aneis' } },
+      { params: { categoria: 'phonestraps' } },
       { params: { categoria: 'chaveiros' } }
     ],
     fallback: false //indicates the type of fallback

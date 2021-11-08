@@ -80,6 +80,12 @@ const Header = () => {
                 <NavBarLink linkName="Anéis" href="/acessorios/aneis" />
               </li>
               <li>
+                <NavBarLink
+                  linkName="Phone Straps"
+                  href="/acessorios/phonestraps"
+                />
+              </li>
+              <li>
                 <NavBarLink linkName="Chaveiros" href="/acessorios/chaveiros" />
               </li>
             </ul>
