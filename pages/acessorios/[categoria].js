@@ -28,7 +28,7 @@ const ProductShelf = ({products}) => {
   return (
     <section className='m-auto my-10 grid grid-cols-2 gap-10 lg:grid-cols-3'>
       {products.map(product => (
-        <Product productData={product} />
+        <Product key={product._id} productData={product} />
       ))}
   </section>
   );
