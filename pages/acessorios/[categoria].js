@@ -80,7 +80,7 @@ export const getStaticPaths = async () => {
       { params: { categoria: 'aneis' } },
       { params: { categoria: 'chaveiros' } }
     ],
-    fallback: 'blocking' //indicates the type of fallback
+    fallback: false //indicates the type of fallback
   };
 };
 
