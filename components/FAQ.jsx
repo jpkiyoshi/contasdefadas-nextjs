@@ -12,7 +12,9 @@ const FAQ = () => {
           {({ open }) => (
             <>
               <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-2xl font-medium text-left rounded-lg md:text-3xl bg-contas-pink-light text-contas-purple-dark hover:bg-contas-pink-light focus:outline-none focus-visible:ring focus-visible:contas-purple-dark focus-visible:ring-opacity-75">
-                <span>Lorem ipsum dolor sit amet?</span>
+                <span>
+                  Vocês fazem acessórios personalizadas, tipo com nome etc?
+                </span>
                 <ChevronUpIcon
                   className={`${
                     open ? 'transform rotate-180' : ''
@@ -28,9 +30,8 @@ const FAQ = () => {
                 leaveTo="transform scale-95 opacity-0"
               >
                 <Disclosure.Panel className="px-4 pt-4 pb-2 text-xl md:text-2xl text-contas-pink-light">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  nostrum repellat officia dolor fugit voluptatum ipsum minima
-                  assumenda quo magnam.
+                  Fazemos sim! O cliente nos fornece suas preferências básicas e
+                  aí montamos o que foi pedido.
                 </Disclosure.Panel>
               </Transition>
             </>
@@ -40,7 +41,7 @@ const FAQ = () => {
           {({ open }) => (
             <>
               <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-2xl font-medium text-left rounded-lg md:text-3xl bg-contas-pink-light text-contas-purple-dark hover:bg-contas-pink-light focus:outline-none focus-visible:ring focus-visible:contas-purple-dark focus-visible:ring-opacity-75">
-                <span>Lorem ipsum dolor sit amet?</span>
+                <span>Como faço meu pedido?</span>
                 <ChevronUpIcon
                   className={`${
                     open ? 'transform rotate-180' : ''
@@ -56,9 +57,8 @@ const FAQ = () => {
                 leaveTo="transform scale-95 opacity-0"
               >
                 <Disclosure.Panel className="px-4 pt-4 pb-2 text-xl md:text-2xl text-contas-pink-light">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  nostrum repellat officia dolor fugit voluptatum ipsum minima
-                  assumenda quo magnam.
+                  Ao clicar em algum item, você será redirecionado ao nosso
+                  WhatsApp para finalizar a compra.
                 </Disclosure.Panel>
               </Transition>
             </>
@@ -68,7 +68,7 @@ const FAQ = () => {
           {({ open }) => (
             <>
               <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-2xl font-medium text-left rounded-lg md:text-3xl bg-contas-pink-light text-contas-purple-dark hover:bg-contas-pink-light focus:outline-none focus-visible:ring focus-visible:contas-purple-dark focus-visible:ring-opacity-75">
-                <span>Lorem ipsum dolor sit amet?</span>
+                <span>Vocês enviam para todo o Brasil?</span>
                 <ChevronUpIcon
                   className={`${
                     open ? 'transform rotate-180' : ''
@@ -84,9 +84,8 @@ const FAQ = () => {
                 leaveTo="transform scale-95 opacity-0"
               >
                 <Disclosure.Panel className="px-4 pt-4 pb-2 text-xl md:text-2xl text-contas-pink-light">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  nostrum repellat officia dolor fugit voluptatum ipsum minima
-                  assumenda quo magnam.
+                  Ainda não, mas brevemente o faremos! Por enquanto estamos
+                  restritos ao Distrito Federal.
                 </Disclosure.Panel>
               </Transition>
             </>

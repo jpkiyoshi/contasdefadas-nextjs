@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 import client from '../../sanity/client';
@@ -10,13 +10,13 @@ const Product = ({ productData }) => {
   const { name, slug, image, price } = productData;
 
   return (
-    <div className='flex-col justify-center items-left border border-contas-pink-light rounded-xl hover:opacity-80'>
+    <div className="flex-col justify-center border items-left border-contas-pink-light rounded-xl hover:opacity-80">
       <Link href={`/produtos/${name.toLowerCase().replace(' ', '-')}`}>
         <a>
-          <Image src={image} height='500' width='500' />
-          <div className='relative flex flex-col space-y-5 p-5'>
-            <h3 className='text-2xl font-bold w-full break-words'>{name}</h3>
-            <p className='text-lg'>R$ {price}</p>
+          <Image src={image} height="500" width="500" />
+          <div className="relative flex flex-col p-5 space-y-5">
+            <h3 className="w-full text-2xl font-bold break-words">{name}</h3>
+            <p className="text-lg">R$ {price}</p>
           </div>
         </a>
       </Link>
@@ -24,16 +24,15 @@ const Product = ({ productData }) => {
   );
 };
 
-const ProductShelf = ({products}) => {
+const ProductShelf = ({ products }) => {
   return (
-    <section className='m-auto my-10 grid grid-cols-2 gap-10 lg:grid-cols-3'>
+    <section className="grid grid-cols-2 gap-10 m-auto my-10 lg:grid-cols-3">
       {products.map(product => (
         <Product key={product._id} productData={product} />
       ))}
-  </section>
+    </section>
   );
-}
-
+};
 
 const Categoria = ({ data, params }) => {
   const router = useRouter();
@@ -60,8 +59,10 @@ const Categoria = ({ data, params }) => {
 
   return (
     <Layout>
-      <div className='container m-auto flex flex-col items-center justify-center mt-10'>
-        <h1 className='capitalize text-center text-4xl font-bold text-contas-pink-main mb-5'>{categoria}</h1>
+      <div className="container flex flex-col items-center justify-center m-auto mt-10">
+        <h1 className="mb-5 text-4xl font-bold text-center capitalize text-contas-pink-main">
+          {categoria}
+        </h1>
         <ProductShelf products={data} />
         {/* {seeMoreBtnVisible ? <button onClick={seeMoreHandler}>VER MAIS</button> : null} */}
       </div>
@@ -111,7 +112,8 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       data: result
-    }
+    },
+    revalidate: 10
   };
 }
 
