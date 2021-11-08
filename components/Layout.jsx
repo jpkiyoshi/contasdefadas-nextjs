@@ -9,10 +9,10 @@ export default function Layout({ title, children }) {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Contas de fadas | Miçangas e Acessórios</title>
+        <title>Contas de Fadas | Miçangas e Acessórios</title>
         <meta
           property="og:title"
-          content="Contas de fadas | Miçangas e Acessórios"
+          content="Contas de Fadas | Miçangas e Acessórios"
         />
         <meta
           name="description"
