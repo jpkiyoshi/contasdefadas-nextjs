@@ -58,16 +58,13 @@ const Header = () => {
           >
             <ul className="flex flex-col text-lg font-medium list-none lg:flex-row md:text-sm lg:text-sm xl:text-base lg:ml-auto lg:items-center">
               <li>
-                <NavBarLink linkName="Pulseiras" href="/acessorios/pulseiras" />
-              </li>
-              <li>
                 <NavBarLink
                   linkName="Colares / Chokers"
                   href="/acessorios/colares"
                 />
               </li>
               <li>
-                <NavBarLink linkName="Brincos" href="/acessorios/brincos" />
+                <NavBarLink linkName="Pulseiras" href="/acessorios/pulseiras" />
               </li>
               <li>
                 <NavBarLink
@@ -75,6 +72,10 @@ const Header = () => {
                   href="/acessorios/tornozeleiras"
                 />
               </li>
+              <li>
+                <NavBarLink linkName="Brincos" href="/acessorios/brincos" />
+              </li>
+
               <li>
                 <NavBarLink linkName="Anéis" href="/acessorios/aneis" />
               </li>
