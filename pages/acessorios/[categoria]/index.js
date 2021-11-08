@@ -2,15 +2,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-import client from '../../sanity/client';
-import Layout from '../../components/Layout';
+import client from '../../../sanity/client';
 
 const Product = ({ productData }) => {
-  const { name, slug, image, price } = productData;
+  const { name, image, slug, price, productSlug } = productData;
 
   return (
     <div className="flex-col justify-center border items-left border-contas-pink-light rounded-xl hover:opacity-80">
-      <Link href={`/produtos/${name.toLowerCase().replaceAll(' ', '-')}`}>
+      <Link href={`/acessorios/${slug}/${productSlug}`}>
         <a>
           <Image src={image} height="500" width="500" />
           <div className="relative flex flex-col p-5 space-y-5">
@@ -55,15 +54,13 @@ const Categoria = ({ data }) => {
   // };
 
   return (
-    <Layout>
-      <div className="container flex flex-col items-center justify-center m-auto mt-10">
-        <h1 className="mb-5 text-4xl font-bold text-center capitalize text-contas-pink-main">
-          {data[0]?.category}
-        </h1>
-        <ProductShelf products={data} />
-        {/* {seeMoreBtnVisible ? <button onClick={seeMoreHandler}>VER MAIS</button> : null} */}
-      </div>
-    </Layout>
+    <div className="container flex flex-col items-center justify-center m-auto mt-10">
+      <h1 className="mb-5 text-4xl font-bold text-center capitalize text-contas-pink-main">
+        {data[0]?.category}
+      </h1>
+      <ProductShelf products={data} />
+      {/* {seeMoreBtnVisible ? <button onClick={seeMoreHandler}>VER MAIS</button> : null} */}
+    </div>
   );
 };
 
@@ -93,6 +90,7 @@ export async function getStaticProps({ params }) {
     "image": imagem.asset->url,
     "description": descricao,
     "price": preco,
+    "productSlug": slug.current
   }`;
 
   let result = await client.fetch(query);
