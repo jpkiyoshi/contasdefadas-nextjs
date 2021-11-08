@@ -31,20 +31,19 @@ const Testimonials = () => {
                 </div>
                 <div className="flex flex-col items-start justify-center">
                   <h4 className="font-bold text-contas-pink-light ">
-                    John Doe
+                    Mateus Fernando
                   </h4>
                   <p className="text-contas-pink-light text-opacity-70">
-                    CEO of Something
+                    Cliente
                   </p>
                 </div>
               </div>
               <blockquote className="mt-8 text-xl text-contas-pink-light text-opacity-80">
-                &quot;This is a no-brainer if you want to take your business to
-                the next level. If you are looking for the ultimate toolset,
-                this is it!&quot;
+                &quot;Amamos! Minha avó ficou apaixonada no phone strap e eu tô
+                usando minha pulseira todo dia.&quot;
               </blockquote>
             </div>
-            <div className="flex flex-col items-start justify-start w-full h-auto px-0 mx-0 mb-12 border-l border-r border-transparent lg:w-1/3 lg:mb-0 lg:px-8 lg:mx-8 lg:border-gray-200">
+            <div className="flex flex-col items-start justify-start w-full h-auto px-0 mx-0 mb-12 border-l border-r border-transparent lg:w-1/3 lg:mb-0 lg:px-8 lg:mx-8 lg:border-gray-200 lg:self-start ">
               <div className="flex items-center justify-center">
                 <div className="relative w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
                   <Image
@@ -56,19 +55,18 @@ const Testimonials = () => {
                 </div>
                 <div className="flex flex-col items-start justify-center">
                   <h4 className="font-bold text-contas-pink-light ">
-                    Jane Doe
+                    Beatriz Guerra
                   </h4>
                   <p className="text-contas-pink-light text-opacity-70">
-                    CTO of Business
+                    Cliente
                   </p>
                 </div>
               </div>
               <blockquote className="mt-8 text-xl text-contas-pink-light text-opacity-80">
-                &quot;Thanks for creating this service. My life is so much
-                easier. Thanks for making such a great product.&quot;
+                &quot;Amei! As chokers ficaram lindas. Você arrasa!&quot;
               </blockquote>
             </div>
-            <div className="flex flex-col items-start justify-start w-full h-auto lg:w-1/3">
+            <div className="flex flex-col items-start justify-start w-full h-auto lg:w-1/3 lg:self-start">
               <div className="flex items-center justify-center">
                 <div className="relative w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
                   <Image
@@ -80,16 +78,15 @@ const Testimonials = () => {
                 </div>
                 <div className="flex flex-col items-start justify-center">
                   <h4 className="font-bold text-contas-pink-light ">
-                    John Smith
+                    Letícia Campos
                   </h4>
                   <p className="text-contas-pink-light text-opacity-70">
-                    Creator of Stuff
+                    Cliente
                   </p>
                 </div>
               </div>
               <blockquote className="mt-8 text-xl text-contas-pink-light text-opacity-80">
-                &quot;Packed with awesome content and exactly what I was looking
-                for. I would highly recommend this to anyone.&quot;
+                &quot;Eu amei o phone strap! Facilita a vida.&quot;
               </blockquote>
             </div>
           </div>
