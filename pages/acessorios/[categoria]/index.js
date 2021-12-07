@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import formatMoney from '../../../utils/formatMoney';
 
 import client from '../../../sanity/client';
 
 const Product = ({ productData }) => {
-  const { name, image, slug, price, productSlug } = productData;
+  const { name, image, description, slug, price, productSlug } = productData;
 
   return (
     <div className="flex-col justify-center border items-left border-contas-pink-light rounded-xl hover:opacity-80">
@@ -14,7 +15,8 @@ const Product = ({ productData }) => {
           <Image src={image} height="500" width="500" />
           <div className="relative flex flex-col p-5 space-y-5">
             <h3 className="w-full text-2xl font-bold break-words">{name}</h3>
-            <p className="text-lg">R$ {price}</p>
+            <p>{description}</p>
+            <p className="text-lg">{formatMoney(parseInt(price))}</p>
           </div>
         </a>
       </Link>
