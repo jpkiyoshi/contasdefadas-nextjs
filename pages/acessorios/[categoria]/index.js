@@ -12,7 +12,12 @@ const Product = ({ productData }) => {
     <div className="flex-col justify-center border items-left border-contas-pink-light rounded-xl hover:opacity-80">
       <Link href={`/acessorios/${slug}/${productSlug}`}>
         <a>
-          <Image src={image} height="500" width="500" />
+          <Image
+            src={image}
+            height="500"
+            width="500"
+            className="rounded-t-xl"
+          />
           <div className="relative flex flex-col p-5 space-y-5">
             <h3 className="w-full text-2xl font-bold break-words">{name}</h3>
             <p>{description}</p>
