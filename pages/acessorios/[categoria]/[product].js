@@ -19,12 +19,14 @@ const Product = ({ data }) => {
             <h2 className="mb-1 text-sm tracking-widest text-gray-500 uppercase title-font">
               {categoria}
             </h2>
-            <h1 className="mb-1 text-3xl font-medium text-gray-900 title-font">
+            <h1 className="mb-1 text-3xl font-medium text-contas-purple-dark title-font">
               {nome}
             </h1>
-            <p className="mb-3 leading-relaxed">{descricao}</p>
+            <p className="mb-3 leading-relaxed text-contas-purple-dark">
+              {descricao}
+            </p>
             <div className="flex flex-col gap-4">
-              <span className="text-2xl font-medium text-gray-900 title-font">
+              <span className="text-2xl font-medium text-contas-purple-dark title-font">
                 {formatMoney(parseInt(preco))}
               </span>
               <a
