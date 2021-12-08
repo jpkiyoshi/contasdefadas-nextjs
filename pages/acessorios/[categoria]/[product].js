@@ -26,7 +26,7 @@ const Product = ({ data }) => {
               {descricao}
             </p>
             <div className="flex flex-col gap-4">
-              <span className="text-2xl font-medium text-contas-purple-dark title-font">
+              <span className="text-2xl font-medium text-contas-pink-dark title-font">
                 {formatMoney(parseInt(preco))}
               </span>
               <a
