@@ -29,6 +29,7 @@ const Product = ({ data }) => {
                 {formatMoney(parseInt(preco))}
               </span>
               <a
+                rel="noreferrer"
                 target="_blank"
                 href={`https://api.whatsapp.com/send?phone=5561985601755&text=Olá, gostaria de comprar o acessório ${nome}, de R$${preco}. https://contasdefadas-nextjs.vercel.app${router.asPath}`}
                 className="flex justify-center px-6 py-2 text-white bg-green-700 border-0 rounded focus:outline-none hover:bg-green-600"
