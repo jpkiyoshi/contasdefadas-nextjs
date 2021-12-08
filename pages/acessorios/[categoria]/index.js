@@ -13,6 +13,7 @@ const Product = ({ productData }) => {
       <Link href={`/acessorios/${slug}/${productSlug}`}>
         <a>
           <Image
+            alt={name}
             src={image}
             height="500"
             width="500"

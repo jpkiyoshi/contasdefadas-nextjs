@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import client from '../../../sanity/client';
 import formatMoney from '../../../utils/formatMoney';
 import { useRouter } from 'next/router';
@@ -12,7 +11,7 @@ const Product = ({ data }) => {
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap mx-auto lg:w-4/5">
           <img
-            alt="ecommerce"
+            alt={nome}
             className="object-cover object-center w-full rounded shadow-lg lg:w-1/2"
             src={imagem}
           />
