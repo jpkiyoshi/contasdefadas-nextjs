@@ -8,7 +8,7 @@ const Product = ({ data }) => {
 
   return (
     <section className="overflow-hidden text-gray-700 body-font bg-contas-pink-light">
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 py-10 mx-auto lg:py-24">
         <div className="flex flex-wrap mx-auto lg:w-4/5">
           <img
             alt={nome}
