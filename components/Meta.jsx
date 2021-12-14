@@ -50,6 +50,20 @@ const Meta = ({
         href="/favicon-16x16.png"
       />
       <link rel="manifest" href="/site.webmanifest" />
+      <script>
+        if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!==
+        0)
+        {fetch(
+          'https://counter.dev/track?' +
+            new URLSearchParams({
+              referrer: document.referrer,
+              screen: screen.width + 'x' + screen.height,
+              user: 'kiyoshi33@gmail.com',
+              utcoffset: '-3'
+            })
+        )}
+        ;sessionStorage.setItem("_swa","1");
+      </script>
     </Head>
   );
 };
