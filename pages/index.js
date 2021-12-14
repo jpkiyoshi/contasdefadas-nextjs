@@ -2,10 +2,12 @@ import Hero from '../components/Hero';
 import HomeCards from '../components/HomeCards';
 import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
+import Meta from '../components/Meta';
 
 export default function Home() {
   return (
     <>
+      <Meta />
       <Hero />
       <HomeCards
         title="Colares & Chokers"

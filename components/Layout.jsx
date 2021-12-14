@@ -1,13 +1,12 @@
 import Header from './Header';
 import Footer from './Footer';
 import ScrollToTopButton from './ScrollToTopButton';
-import Meta from './Meta';
+
 import Script from 'next/script';
 
 export default function Layout({ title, children }) {
   return (
     <div>
-      <Meta />
       <Script
         id="analytics"
         strategy="afterInteractive"
