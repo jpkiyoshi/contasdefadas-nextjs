@@ -11,8 +11,21 @@ const Product = ({ data }) => {
     <>
       <Head>
         <title>Contas de Fadas | {nome}</title>
+        <meta property="og:title" content={`Contas de Fadas | ${nome}`} />
         <meta name="description" content={descricao} />
+        <meta
+          property="og:url"
+          content={`https://contasdefadas-nextjs.vercel.app/${router.asPath}`}
+        />
+        <meta property="og:title" content={`Contas de Fadas | ${nome}`} />
+        <meta property="og:description" content={descricao} />
         <meta property="og:image" content={imagem} />
+        <meta
+          property="twitter:url"
+          content={`https://contasdefadas-nextjs.vercel.app/${router.asPath}`}
+        />
+        <meta property="twitter:title" content={`Contas de Fadas | ${nome}`} />
+        <meta property="twitter:description" content={descricao} />
         <meta property="twitter:image" content={imagem} />
       </Head>
 
