@@ -65,7 +65,7 @@ const Categoria = ({ data }) => {
   return (
     <div className="py-10 bg-contas-pink-light">
       <div className="container flex flex-col items-center justify-center m-auto">
-        <h1 className="mb-5 text-4xl font-bold text-center capitalize text-contas-purple-dark">
+        <h1 className="mb-5 text-5xl font-bold text-center capitalize text-contas-purple-dark">
           {data[0]?.category}
         </h1>
         <ProductShelf products={data} />

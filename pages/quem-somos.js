@@ -1,7 +1,7 @@
 const QuemSomos = () => {
   return (
     <div className="bg-contas-pink-light p-10 flex flex-col gap-6">
-      <h1 className="text-4xl font-bold mx-auto capitalize text-contas-purple-dark">
+      <h1 className="text-5xl font-bold mx-auto capitalize text-contas-purple-dark">
         quem somos
       </h1>
       <p className="text-2xl">
