@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Meta from '../../../components/Meta';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import formatMoney from '../../../utils/formatMoney';
@@ -63,15 +64,18 @@ const Categoria = ({ data }) => {
   // };
 
   return (
-    <div className="py-10 bg-contas-pink-light">
-      <div className="container flex flex-col items-center justify-center m-auto">
-        <h1 className="mb-5 text-5xl font-bold text-center capitalize text-contas-purple-dark">
-          {data[0]?.category}
-        </h1>
-        <ProductShelf products={data} />
-        {/* {seeMoreBtnVisible ? <button onClick={seeMoreHandler}>VER MAIS</button> : null} */}
+    <>
+      <Meta title={data[0]?.category} />
+      <div className="py-10 bg-contas-pink-light">
+        <div className="container flex flex-col items-center justify-center m-auto">
+          <h1 className="mb-5 text-5xl font-bold text-center capitalize text-contas-purple-dark">
+            {data[0]?.category}
+          </h1>
+          <ProductShelf products={data} />
+          {/* {seeMoreBtnVisible ? <button onClick={seeMoreHandler}>VER MAIS</button> : null} */}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
