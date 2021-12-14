@@ -1,7 +1,7 @@
 import client from '../../../sanity/client';
 import formatMoney from '../../../utils/formatMoney';
 import { useRouter } from 'next/router';
-import Head from 'next/head';
+import Meta from '../../../components/Meta';
 
 const Product = ({ data }) => {
   const { categoria, descricao, imagem, nome, preco } = data[0];
@@ -9,25 +9,7 @@ const Product = ({ data }) => {
 
   return (
     <>
-      <Head>
-        <title>Contas de Fadas | {nome}</title>
-        <meta property="og:title" content={`Contas de Fadas | ${nome}`} />
-        <meta name="description" content={descricao} />
-        <meta
-          property="og:url"
-          content={`https://contasdefadas-nextjs.vercel.app/${router.asPath}`}
-        />
-        <meta property="og:title" content={`Contas de Fadas | ${nome}`} />
-        <meta property="og:description" content={descricao} />
-        <meta property="og:image" content={imagem} />
-        <meta
-          property="twitter:url"
-          content={`https://contasdefadas-nextjs.vercel.app/${router.asPath}`}
-        />
-        <meta property="twitter:title" content={`Contas de Fadas | ${nome}`} />
-        <meta property="twitter:description" content={descricao} />
-        <meta property="twitter:image" content={imagem} />
-      </Head>
+      <Meta title={nome} description={descricao} image={imagem} />
 
       <section className="overflow-hidden text-gray-700 body-font bg-contas-pink-light">
         <div className="container px-5 py-10 mx-auto lg:py-24">
