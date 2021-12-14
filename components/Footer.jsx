@@ -10,19 +10,18 @@ const Footer = () => {
               Informação
             </h3>
             <div className="mt-4">
-              <Link href={`/quem-somos`}>
+              <Link href={'/quem-somos'}>
                 <a className="text-base leading-6 text-opacity-70 text-contas-pink-light hover:text-opacity-100">
                   Quem somos
                 </a>
               </Link>
             </div>
             <div>
-              <a
-                href="#FAQ"
-                className="text-base leading-6 text-opacity-70 text-contas-pink-light hover:text-opacity-100"
-              >
-                Perguntas Frequentes
-              </a>
+              <Link href={'/perguntas-frequentes'}>
+                <a className="text-base leading-6 text-opacity-70 text-contas-pink-light hover:text-opacity-100">
+                  Perguntas Frequentes
+                </a>
+              </Link>
             </div>
           </div>
           <div className="flex flex-col items-center mx-14">
