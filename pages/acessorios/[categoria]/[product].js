@@ -2,7 +2,7 @@ import client from '../../../sanity/client';
 import formatMoney from '../../../utils/formatMoney';
 import { useRouter } from 'next/router';
 import Meta from '../../../components/Meta';
-
+import Image from 'next/image';
 const Product = ({ data }) => {
   const { categoria, descricao, imagem, nome, preco } = data[0];
   const router = useRouter();
