@@ -14,11 +14,21 @@ const Product = ({ data }) => {
       <section className="overflow-hidden text-gray-700 body-font bg-contas-pink-light">
         <div className="container px-5 py-10 mx-auto lg:py-24">
           <div className="flex flex-wrap mx-auto lg:w-4/5">
-            <img
+            {/* <img
               alt={nome}
               className="object-cover object-center w-full rounded shadow-lg lg:w-1/2"
               src={imagem}
-            />
+            /> */}
+            <div className='w-full lg:w-1/2'>
+              <Image
+                src={imagem}
+                width="100%"
+                height="100%"
+                layout="responsive"
+                objectFit="contain"
+                className="object-cover object-center rounded shadow-lg"
+              />
+            </div>
             <div className="w-full mt-6 lg:w-1/2 lg:pl-10 lg:py-6 lg:mt-0">
               <h2 className="mb-1 text-sm tracking-widest text-gray-500 uppercase title-font">
                 {categoria}
