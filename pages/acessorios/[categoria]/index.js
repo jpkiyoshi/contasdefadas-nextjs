@@ -5,7 +5,9 @@ import { useRouter } from 'next/router';
 import formatMoney from '../../../utils/formatMoney';
 
 import SanityService from '../../../services/sanity'
-import { Pagination } from '../../../utils/pagination';
+import { PaginationConfig } from '../../../utils/pagination';
+
+import Pagination from '../../../components/Pagination';
 
 const Product = ({ productData }) => {
   const { name, image, description, slug, price, productSlug } = productData;
@@ -43,8 +45,8 @@ const ProductShelf = ({ products }) => {
   );
 };
 
-const Categoria = ({ data }) => {
-  const router = useRouter();
+const Categoria = ({ category, data, currentPage, totalPages, nextDisabled, prevDisabled }) => {
+
 
   return (
     <>
@@ -57,9 +59,35 @@ const Categoria = ({ data }) => {
           <ProductShelf products={data} />
         </div>
       </div>
+      <Pagination
+        category={category}
+        totalPages={totalPages}
+        currentPage={currentPage}
+        nextDisabled={nextDisabled}
+        prevDisabled={prevDisabled}
+      />
     </>
   );
 };
+
+const CategoryIndex = ({ category, data, currentPage, totalPages }) => {
+  const nextDisabled = parseInt(currentPage, 10) === parseInt(totalPages, 10);
+  const prevDisabled = parseInt(currentPage, 10) === 1;
+
+  return (
+    <>
+      <Categoria data={data}
+        category={category}
+        totalPages={totalPages}
+        currentPage={currentPage}
+        nextDisabled={nextDisabled}
+        prevDisabled={prevDisabled}
+      />
+
+    </>
+  );
+
+}
 
 export const getStaticPaths = async () => {
   return {
@@ -76,18 +104,19 @@ export const getStaticPaths = async () => {
   };
 };
 
-export async function getStaticProps({ params }) {
+export const getStaticProps = async ({ params }) => {
   const category = params.categoria;
 
 
   const productsInPage = await SanityService.getContentFromSpecificCategoryPage(category, 1);
   const totalNumberOfProductsInCategory = productsInPage.totalNumberOfProductsInCategory;
 
-  const totalPages = Math.ceil(totalNumberOfProductsInCategory / Pagination.config.pageSize);
+  const totalPages = Math.ceil(totalNumberOfProductsInCategory / PaginationConfig.config.pageSize);
 
 
   return {
     props: {
+      category: category,
       data: productsInPage.results,
       totalPages,
       currentPage: "1",
@@ -96,4 +125,4 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export default Categoria;
+export default CategoryIndex;

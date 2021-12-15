@@ -1,5 +1,5 @@
 import sanityClient from '@sanity/client';
-import { Pagination } from '../utils/pagination';
+import { PaginationConfig } from '../utils/pagination';
 
 const client = sanityClient({
     projectId: '4nd9464x',
@@ -9,12 +9,14 @@ const client = sanityClient({
     useCdn: false // `false` if you want to ensure fresh data
 });
 
+
 const createProductQuery = () => {
-  return;
+    return;
 }
 
-const createCategoryQuery = (category, page = null) => {
-    const queryString = `*[_type == "acessorio" && categoria._ref in 
+const getCategoryQueryString = (category) => {
+    return (
+        `*[_type == "acessorio" && categoria._ref in 
         *[slug.current == "${category}"]._id] | order(_createdAt) {
         _id,
         "name": nome,
@@ -24,23 +26,27 @@ const createCategoryQuery = (category, page = null) => {
         "description": descricao,
         "price": preco,
         "productSlug": slug.current,
-    }`
+        }`
+    )
+}
+
+const createCategoryQuery = (category, page = null) => {
 
     let sanityPageFormat = '';
     if (page) {
         sanityPageFormat = getSanityPageFormat(page);
     }
-
+    const query = getCategoryQueryString(category);
     return `{
-        "results": ${queryString}${sanityPageFormat},
-        "totalNumberOfProductsInCategory": count(${queryString}),
+        "results": ${query}${sanityPageFormat},
+        "totalNumberOfProductsInCategory": count(${query}),
     }`;
 }
 
-const getSanityPageFormat = (page, pageSize = Pagination.config.pageSize) => {
+const getSanityPageFormat = (page, pageSize = PaginationConfig.config.pageSize) => {
     const start = page === 1 ? 0 : (page - 1) * pageSize;
     const finish = (page * pageSize) - 1;
-    return`[${start}..${finish}]`;
+    return `[${start}..${finish}]`;
 }
 
 const getQuery = async (query) => {
@@ -48,8 +54,8 @@ const getQuery = async (query) => {
 }
 
 const getTotalProductsInCategory = async (category) => {
-    const query = createCategoryQuery(category);
-    return await client.fetch(query.totalNumberOfProductsInCategory);
+    const query = getCategoryQueryString(category);
+    return await client.fetch(`count(${query})`);
 }
 
 const getContentFromSpecificCategoryPage = async (category, page) => {
