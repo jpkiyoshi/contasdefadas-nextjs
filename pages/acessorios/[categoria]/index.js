@@ -4,7 +4,10 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import formatMoney from '../../../utils/formatMoney';
 
-import client from '../../../sanity/client';
+import SanityService from '../../../services/sanity';
+import { PaginationConfig } from '../../../utils/pagination';
+
+import Pagination from '../../../components/Pagination';
 
 const Product = ({ productData }) => {
   const { name, image, description, slug, price, productSlug } = productData;
@@ -42,27 +45,14 @@ const ProductShelf = ({ products }) => {
   );
 };
 
-const Categoria = ({ data }) => {
-  const router = useRouter();
-  // const productsPerPage = 6;
-  // const [visibleProducts, setVisibleProducts] = useState(data.slice(0, productsPerPage));
-  // const [seeMoreBtnVisible, setSeeMoreBtnVisible] = useState(true);
-
-  // useEffect(() => {
-  //   visibleProducts.length >= data.length ? setSeeMoreBtnVisible(false) : null;
-  // }, [visibleProducts]);
-
-  // const seeMoreHandler = (e) => {
-  //   e.preventDefault;
-  //   const numOfVisibleProducts = visibleProducts.length;
-  //   const numOfTotalProducts = data.length;
-  //   console.log(numOfVisibleProducts, numOfTotalProducts)
-  //   console.log()
-  //   if (numOfVisibleProducts < numOfTotalProducts ) {
-  //     setVisibleProducts(visibleProducts.concat(data.slice(numOfVisibleProducts, numOfVisibleProducts + productsPerPage)));
-  //   }
-  // };
-
+const Categoria = ({
+  category,
+  data,
+  currentPage,
+  totalPages,
+  nextDisabled,
+  prevDisabled
+}) => {
   return (
     <>
       <Meta title={data[0]?.category} />
@@ -72,9 +62,35 @@ const Categoria = ({ data }) => {
             {data[0]?.category}
           </h1>
           <ProductShelf products={data} />
-          {/* {seeMoreBtnVisible ? <button onClick={seeMoreHandler}>VER MAIS</button> : null} */}
         </div>
       </div>
+      <div className="flex items-center bg-contas-pink-light">
+        <Pagination
+          category={category}
+          totalPages={totalPages}
+          currentPage={currentPage}
+          nextDisabled={nextDisabled}
+          prevDisabled={prevDisabled}
+        />
+      </div>
+    </>
+  );
+};
+
+const CategoryIndex = ({ category, data, currentPage, totalPages }) => {
+  const nextDisabled = parseInt(currentPage, 10) === parseInt(totalPages, 10);
+  const prevDisabled = parseInt(currentPage, 10) === 1;
+
+  return (
+    <>
+      <Categoria
+        data={data}
+        category={category}
+        totalPages={totalPages}
+        currentPage={currentPage}
+        nextDisabled={nextDisabled}
+        prevDisabled={prevDisabled}
+      />
     </>
   );
 };
@@ -94,38 +110,29 @@ export const getStaticPaths = async () => {
   };
 };
 
-export async function getStaticProps({ params }) {
+export const getStaticProps = async ({ params }) => {
   const category = params.categoria;
 
-  const query = `*[_type == "acessorio" && categoria._ref in *[slug.current == "${category}"]._id] | order(_createdAt) {
-    _id,
-    "name": nome,
-    "category": categoria->categoria,
-    "slug": categoria->slug.current,
-    "image": imagem.asset->url,
-    "description": descricao,
-    "price": preco,
-    "productSlug": slug.current
-  }`;
+  const productsInPage = await SanityService.getContentFromSpecificCategoryPage(
+    category,
+    1
+  );
+  const totalNumberOfProductsInCategory =
+    productsInPage.totalNumberOfProductsInCategory;
 
-  let result = await client.fetch(query);
-
-  // BEGIN for testing
-  // const mock = []
-  // for (let i = 0; i <= 10; i++) {
-  //   mock.push(result[0]);
-  //   mock.push(result[1]);
-  // }
-  // result = mock;
-  // console.log(result)
-  // END for testing
+  const totalPages = Math.ceil(
+    totalNumberOfProductsInCategory / PaginationConfig.config.pageSize
+  );
 
   return {
     props: {
-      data: result
+      category: category,
+      data: productsInPage.results,
+      totalPages,
+      currentPage: '1'
     },
     revalidate: 10
   };
-}
+};
 
-export default Categoria;
+export default CategoryIndex;
