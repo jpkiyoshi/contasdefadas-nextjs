@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import formatMoney from '../../../utils/formatMoney';
 
-import SanityService from '../../../services/sanity'
+import SanityService from '../../../services/sanity';
 import { PaginationConfig } from '../../../utils/pagination';
 
 import Pagination from '../../../components/Pagination';
@@ -45,9 +45,14 @@ const ProductShelf = ({ products }) => {
   );
 };
 
-const Categoria = ({ category, data, currentPage, totalPages, nextDisabled, prevDisabled }) => {
-
-
+const Categoria = ({
+  category,
+  data,
+  currentPage,
+  totalPages,
+  nextDisabled,
+  prevDisabled
+}) => {
   return (
     <>
       <Meta title={data[0]?.category} />
@@ -59,13 +64,15 @@ const Categoria = ({ category, data, currentPage, totalPages, nextDisabled, prev
           <ProductShelf products={data} />
         </div>
       </div>
-      <Pagination
-        category={category}
-        totalPages={totalPages}
-        currentPage={currentPage}
-        nextDisabled={nextDisabled}
-        prevDisabled={prevDisabled}
-      />
+      <div className="flex items-center bg-contas-pink-light">
+        <Pagination
+          category={category}
+          totalPages={totalPages}
+          currentPage={currentPage}
+          nextDisabled={nextDisabled}
+          prevDisabled={prevDisabled}
+        />
+      </div>
     </>
   );
 };
@@ -76,18 +83,17 @@ const CategoryIndex = ({ category, data, currentPage, totalPages }) => {
 
   return (
     <>
-      <Categoria data={data}
+      <Categoria
+        data={data}
         category={category}
         totalPages={totalPages}
         currentPage={currentPage}
         nextDisabled={nextDisabled}
         prevDisabled={prevDisabled}
       />
-
     </>
   );
-
-}
+};
 
 export const getStaticPaths = async () => {
   return {
@@ -107,22 +113,26 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const category = params.categoria;
 
+  const productsInPage = await SanityService.getContentFromSpecificCategoryPage(
+    category,
+    1
+  );
+  const totalNumberOfProductsInCategory =
+    productsInPage.totalNumberOfProductsInCategory;
 
-  const productsInPage = await SanityService.getContentFromSpecificCategoryPage(category, 1);
-  const totalNumberOfProductsInCategory = productsInPage.totalNumberOfProductsInCategory;
-
-  const totalPages = Math.ceil(totalNumberOfProductsInCategory / PaginationConfig.config.pageSize);
-
+  const totalPages = Math.ceil(
+    totalNumberOfProductsInCategory / PaginationConfig.config.pageSize
+  );
 
   return {
     props: {
       category: category,
       data: productsInPage.results,
       totalPages,
-      currentPage: "1",
+      currentPage: '1'
     },
     revalidate: 10
   };
-}
+};
 
 export default CategoryIndex;
