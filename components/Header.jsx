@@ -3,19 +3,22 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 
-const Logo = () => (
+const Logo = ({navbarOpen, setNavbarOpen}) => (
   <Image
     src="https://res.cloudinary.com/jpkiyoshi/image/upload/v1636059714/Site_-_Header_-_Logo_bg4lh8.png"
     width="106"
     height="60"
     responsive="true"
     alt="Contas de Fadas logo"
+    onClick={() => setNavbarOpen(false)}
   />
 );
 
-const NavBarLink = ({ linkName, href }) => (
+const NavBarLink = ({ linkName, href, navbarOpen, setNavbarOpen }) => (
   <Link href={href} locale={false}>
-    <a className="flex items-center px-3 py-2 leading-snug text-contas-pink-light hover:text-contas-pink-dark">
+    <a className="flex items-center px-3 py-2 leading-snug text-contas-pink-light hover:text-contas-pink-dark"
+      onClick={() => setNavbarOpen(!navbarOpen)}
+    >
       <span className="ml-2">{linkName}</span>
     </a>
   </Link>
@@ -33,7 +36,7 @@ const Header = () => {
           <div className="relative flex justify-between w-full py-1 lg:w-auto lg:static lg:block lg:justify-start">
             <Link href="/">
               <a className="ml-auto mr-auto">
-                <Logo />
+                <Logo navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
               </a>
             </Link>
             <button
@@ -52,41 +55,64 @@ const Header = () => {
             </button>
           </div>
           <div
-            className={`lg:flex flex-grow items-center ${
-              navbarOpen ? ' flex' : ' hidden'
-            }`}
+            className={`lg:flex flex-grow items-center ${navbarOpen ? ' flex' : ' hidden'
+              }`}
           >
             <ul className="flex flex-col text-lg font-medium list-none lg:flex-row md:text-sm lg:text-sm xl:text-base lg:ml-auto lg:items-center">
               <li>
                 <NavBarLink
                   linkName="Colares / Chokers"
                   href="/acessorios/colares"
+                  setNavbarOpen={setNavbarOpen}
+                  navbarOpen={navbarOpen}
                 />
               </li>
               <li>
-                <NavBarLink linkName="Pulseiras" href="/acessorios/pulseiras" />
+                <NavBarLink linkName="Pulseiras"
+                  href="/acessorios/pulseiras"
+                  setNavbarOpen={setNavbarOpen}
+                  navbarOpen={navbarOpen}
+                />
               </li>
               <li>
                 <NavBarLink
                   linkName="Tornozeleiras"
                   href="/acessorios/tornozeleiras"
+                  setNavbarOpen={setNavbarOpen}
+                  navbarOpen={navbarOpen}
                 />
               </li>
               <li>
-                <NavBarLink linkName="Brincos" href="/acessorios/brincos" />
+                <NavBarLink linkName="Brincos"
+                  href="/acessorios/brincos"
+                  setNavbarOpen={setNavbarOpen}
+                  navbarOpen={navbarOpen}
+                />
               </li>
 
               <li>
-                <NavBarLink linkName="Anéis" href="/acessorios/aneis" />
+                <NavBarLink
+                  linkName="Anéis"
+                  href="/acessorios/aneis"
+                  setNavbarOpen={setNavbarOpen}
+                  navbarOpen={navbarOpen}
+                />
               </li>
               <li>
                 <NavBarLink
                   linkName="Phone Straps"
                   href="/acessorios/phonestraps"
+                  setNavbarOpen={setNavbarOpen}
+                  navbarOpen={navbarOpen}
                 />
               </li>
               <li>
-                <NavBarLink linkName="Chaveiros" href="/acessorios/chaveiros" />
+                <NavBarLink
+                  linkName="Chaveiros"
+                  href="/acessorios/chaveiros"
+                  setNavbarOpen={setNavbarOpen}
+                  navbarOpen={navbarOpen}
+                />
               </li>
             </ul>
           </div>
