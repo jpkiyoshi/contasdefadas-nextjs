@@ -17,7 +17,7 @@ const Meta = ({
       <meta property="og:type" content="website" />
       <meta
         property="og:url"
-        content="https://contasdefadas-nextjs.vercel.app/"
+        content="https://contasdefadas.vercel.app/"
       />
       <meta property="og:title" content={`Contas de Fadas | ${title}`} />
       <meta property="og:description" content={description} />
@@ -27,7 +27,7 @@ const Meta = ({
       <meta property="twitter:card" content="summary_large_image" />
       <meta
         property="twitter:url"
-        content="https://contasdefadas-nextjs.vercel.app/"
+        content="https://contasdefadas.vercel.app/"
       />
       <meta property="twitter:title" content={`Contas de Fadas | ${title}`} />
       <meta property="twitter:description" content={description} />
