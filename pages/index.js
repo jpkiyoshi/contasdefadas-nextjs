@@ -12,46 +12,46 @@ export default function Home() {
       <HomeCards
         title="Colares & Chokers"
         slug="colares"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non odio ab laboriosam, in optio dolore repellendus quos labore eius voluptas!"
+        description="Adicione mais estilo e dê versatilidade ao seu look com nossos colares e chokers"
         imgUrl="https://res.cloudinary.com/jpkiyoshi/image/upload/v1639595551/fotos-home-page-contas-de-fadas/colares_bkdq3f.png"
       />
       <HomeCards
         isInversed
         slug="pulseiras"
         title="Pulseiras"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non odio ab laboriosam, in optio dolore repellendus quos labore eius voluptas!"
+        description="Monte mixes que combinem com a sua essência com as nossas pulseiras"
         imgUrl="https://res.cloudinary.com/jpkiyoshi/image/upload/v1639595551/fotos-home-page-contas-de-fadas/pulseiras_kgqeyq.png"
       />
       <HomeCards
         slug="tornozeleiras"
         title="Tornozeleiras"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non odio ab laboriosam, in optio dolore repellendus quos labore eius voluptas!"
+        description="Quer esbanjar charme também nos tornozelos? Use as nossas tornozeleiras"
         imgUrl="https://res.cloudinary.com/jpkiyoshi/image/upload/v1639595552/fotos-home-page-contas-de-fadas/tornozeleiras_xlix9z.png"
       />
       <HomeCards
         isInversed
         title="Brincos"
         slug="brincos"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non odio ab laboriosam, in optio dolore repellendus quos labore eius voluptas!"
+        description="Destaque mais ainda a beleza de seu rosto usando os nossos brincos"
         imgUrl="https://res.cloudinary.com/jpkiyoshi/image/upload/v1639595553/fotos-home-page-contas-de-fadas/brincos_bun08q.png"
       />
       <HomeCards
         slug="aneis"
         title="Anéis"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non odio ab laboriosam, in optio dolore repellendus quos labore eius voluptas!"
+        description="Adorne os seus dedos com muito mais estilo usando os nossos anéis"
         imgUrl="https://res.cloudinary.com/jpkiyoshi/image/upload/v1639595552/fotos-home-page-contas-de-fadas/aneis_odghgi.png"
       />
       <HomeCards
         isInversed
         title="Phone Straps"
         slug="phonestraps"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non odio ab laboriosam, in optio dolore repellendus quos labore eius voluptas!"
+        description="Além de evitarem a queda de celulares, os nossos phone straps também adicionam estilo e excentricidade"
         imgUrl="https://res.cloudinary.com/jpkiyoshi/image/upload/v1639595551/fotos-home-page-contas-de-fadas/phonestraps_x954n7.png"
       />
       <HomeCards
         slug="chaveiros"
         title="Chaveiros"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non odio ab laboriosam, in optio dolore repellendus quos labore eius voluptas!"
+        description="Use os nossos chaveiros como a sua imaginação mandar: em chaves de carro, agenda, celulares e tudo mais"
         imgUrl="https://res.cloudinary.com/jpkiyoshi/image/upload/v1639595552/fotos-home-page-contas-de-fadas/chaveiros_gsbxpa.png"
       />
       <Testimonials />

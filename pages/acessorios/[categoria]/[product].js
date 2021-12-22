@@ -1,5 +1,5 @@
 import client from '../../../sanity/client';
-import SanityService from '../../../services/sanity'
+import SanityService from '../../../services/sanity';
 import formatMoney from '../../../utils/formatMoney';
 import { useRouter } from 'next/router';
 import Meta from '../../../components/Meta';
@@ -20,7 +20,7 @@ const Product = ({ data }) => {
               className="object-cover object-center w-full rounded shadow-lg lg:w-1/2"
               src={imagem}
             /> */}
-            <div className='w-full lg:w-1/2'>
+            <div className="w-full lg:w-1/2">
               <Image
                 src={imagem}
                 width="100%"
