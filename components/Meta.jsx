@@ -15,10 +15,7 @@ const Meta = ({
       <meta property="og:type" content="website" />
       {/* <!-- Open Graph / Facebook --> */}
       <meta property="og:type" content="website" />
-      <meta
-        property="og:url"
-        content="https://contasdefadas.vercel.app/"
-      />
+      <meta property="og:url" content="https://www.contasdefadas.com.br/" />
       <meta property="og:title" content={`Contas de Fadas | ${title}`} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
@@ -27,7 +24,7 @@ const Meta = ({
       <meta property="twitter:card" content="summary_large_image" />
       <meta
         property="twitter:url"
-        content="https://contasdefadas.vercel.app/"
+        content="https://www.contasdefadas.com.br/"
       />
       <meta property="twitter:title" content={`Contas de Fadas | ${title}`} />
       <meta property="twitter:description" content={description} />
