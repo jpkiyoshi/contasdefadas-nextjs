@@ -6,11 +6,11 @@
 
 <div  align="center">
   <span align="center">
-     <a href="https://www.contasdefadas.com.br/">Website</a>
+     <a href="https://www.contasdefadas.com.br/" target="_blank">Website</a>
   </span>
   <span> | </span>
   <span align="center">
-     <a href="https://www.instagram.com/contasdefadas/">Instagram</a>
+     <a href="https://www.instagram.com/contasdefadas/" target="_blank">Instagram</a>
   </span>
 </div>
 
