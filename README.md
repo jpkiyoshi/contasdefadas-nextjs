@@ -3,9 +3,16 @@
   <br/>
 </p>
 <p align="center">Source code for Contas de Fadas e-commerce.</p>
-<p align="center">
-   <a href="https://www.instagram.com/contasdefadas/">Instagram</a>
-</p>
+
+<div  align="center">
+  <span align="center">
+     <a href="https://www.contasdefadas.com.br/">Website</a>
+  </span>
+  <span> | </span>
+  <span align="center">
+     <a href="https://www.instagram.com/contasdefadas/">Instagram</a>
+  </span>
+</div>
 
 ## Getting Started
 
