@@ -31,7 +31,7 @@ const FAQ = () => {
               >
                 <Disclosure.Panel className="px-4 pt-4 pb-2 text-xl md:text-2xl text-contas-pink-light">
                   Fazemos sim! O cliente nos fornece suas preferências básicas e
-                  aí montamos o que foi pedido.
+                  aí montamos mediante 50% do valor total do que foi pedido.
                 </Disclosure.Panel>
               </Transition>
             </>
