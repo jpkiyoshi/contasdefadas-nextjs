@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 
-const Logo = ({navbarOpen, setNavbarOpen}) => (
+const Logo = ({ navbarOpen, setNavbarOpen }) => (
   <Image
     src="https://res.cloudinary.com/jpkiyoshi/image/upload/v1636059714/Site_-_Header_-_Logo_bg4lh8.png"
     width="106"
@@ -16,7 +16,8 @@ const Logo = ({navbarOpen, setNavbarOpen}) => (
 
 const NavBarLink = ({ linkName, href, navbarOpen, setNavbarOpen }) => (
   <Link href={href} locale={false}>
-    <a className="flex items-center px-3 py-2 leading-snug text-contas-pink-light hover:text-contas-pink-dark"
+    <a
+      className="flex items-center px-3 py-2 leading-snug text-contas-pink-light hover:text-contas-pink-dark"
       onClick={() => setNavbarOpen(!navbarOpen)}
     >
       <span className="ml-2">{linkName}</span>
@@ -55,10 +56,27 @@ const Header = () => {
             </button>
           </div>
           <div
-            className={`lg:flex flex-grow items-center ${navbarOpen ? ' flex' : ' hidden'
-              }`}
+            className={`lg:flex flex-grow items-center ${
+              navbarOpen ? ' flex' : ' hidden'
+            }`}
           >
             <ul className="flex flex-col text-lg font-medium list-none lg:flex-row md:text-sm lg:text-sm xl:text-base lg:ml-auto lg:items-center">
+              <li>
+                <NavBarLink
+                  linkName="Bolsas"
+                  href="/acessorios/bolsas"
+                  setNavbarOpen={setNavbarOpen}
+                  navbarOpen={navbarOpen}
+                />
+              </li>
+              <li>
+                <NavBarLink
+                  linkName="Cintos"
+                  href="/acessorios/cintos"
+                  setNavbarOpen={setNavbarOpen}
+                  navbarOpen={navbarOpen}
+                />
+              </li>
               <li>
                 <NavBarLink
                   linkName="Colares / Chokers"
@@ -68,7 +86,8 @@ const Header = () => {
                 />
               </li>
               <li>
-                <NavBarLink linkName="Pulseiras"
+                <NavBarLink
+                  linkName="Pulseiras"
                   href="/acessorios/pulseiras"
                   setNavbarOpen={setNavbarOpen}
                   navbarOpen={navbarOpen}
@@ -83,7 +102,8 @@ const Header = () => {
                 />
               </li>
               <li>
-                <NavBarLink linkName="Brincos"
+                <NavBarLink
+                  linkName="Brincos"
                   href="/acessorios/brincos"
                   setNavbarOpen={setNavbarOpen}
                   navbarOpen={navbarOpen}

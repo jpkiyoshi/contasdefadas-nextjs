@@ -104,7 +104,9 @@ export const getStaticPaths = async () => {
       { params: { categoria: 'brincos' } },
       { params: { categoria: 'aneis' } },
       { params: { categoria: 'phonestraps' } },
-      { params: { categoria: 'chaveiros' } }
+      { params: { categoria: 'chaveiros' } },
+      { params: { categoria: 'bolsas' } },
+      { params: { categoria: 'cintos' } }
     ],
     fallback: false //indicates the type of fallback
   };

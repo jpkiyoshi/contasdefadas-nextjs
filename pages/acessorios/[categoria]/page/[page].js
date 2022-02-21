@@ -30,7 +30,9 @@ export const getStaticPaths = async () => {
     'tornozeleiras',
     'aneis',
     'phonestraps',
-    'chaveiros'
+    'chaveiros',
+    'bolsas',
+    'cintos'
   ];
 
   const paths = [];
