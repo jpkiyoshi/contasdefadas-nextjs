@@ -3,7 +3,7 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className="border-t border-contas-pink-light bg-contas-purple-dark">
-      <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+      <div className="max-w-screen-xl py-12 mx-auto space-y-8 overflow-hidden sm:px-16 lg:px-16">
         <nav className="flex flex-wrap justify-center gap-10 -mx-5 -my-2x">
           <div className="flex flex-col items-center">
             <h3 className="text-base font-semibold leading-6 uppercase text-opacity-70 text-contas-pink-light">

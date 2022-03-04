@@ -61,7 +61,7 @@ const Header = () => {
             }`}
           >
             <ul className="flex flex-col text-lg font-medium list-none lg:flex-row md:text-sm lg:text-sm xl:text-base lg:ml-auto lg:items-center">
-              {/* <li>
+              <li>
                 <NavBarLink
                   linkName="Bolsas"
                   href="/acessorios/bolsas"
@@ -69,7 +69,7 @@ const Header = () => {
                   navbarOpen={navbarOpen}
                 />
               </li>
-              <li>
+              {/* <li>
                 <NavBarLink
                   linkName="Cintos"
                   href="/acessorios/cintos"
