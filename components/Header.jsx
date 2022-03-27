@@ -63,20 +63,12 @@ const Header = () => {
             <ul className="flex flex-col text-lg font-medium list-none lg:flex-row md:text-sm lg:text-sm xl:text-base lg:ml-auto lg:items-center">
               <li>
                 <NavBarLink
-                  linkName="Bolsas"
-                  href="/acessorios/bolsas"
-                  setNavbarOpen={setNavbarOpen}
-                  navbarOpen={navbarOpen}
-                />
-              </li>
-              {/* <li>
-                <NavBarLink
                   linkName="Cintos"
                   href="/acessorios/cintos"
                   setNavbarOpen={setNavbarOpen}
                   navbarOpen={navbarOpen}
                 />
-              </li> */}
+              </li>
               <li>
                 <NavBarLink
                   linkName="Colares / Chokers"
@@ -109,11 +101,10 @@ const Header = () => {
                   navbarOpen={navbarOpen}
                 />
               </li>
-
               <li>
                 <NavBarLink
-                  linkName="Anéis"
-                  href="/acessorios/aneis"
+                  linkName="Bolsas"
+                  href="/acessorios/bolsas"
                   setNavbarOpen={setNavbarOpen}
                   navbarOpen={navbarOpen}
                 />
