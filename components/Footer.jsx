@@ -79,7 +79,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="mt-8 text-base leading-6 text-center text-opacity-70 text-contas-pink-light">
-          Contas de Fadas © 2021. Todos os direitos reservados.
+          Contas de Fadas © 2022. Todos os direitos reservados.
         </p>
       </div>
     </footer>

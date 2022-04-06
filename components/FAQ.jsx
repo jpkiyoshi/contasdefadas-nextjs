@@ -84,8 +84,7 @@ const FAQ = () => {
                 leaveTo="transform scale-95 opacity-0"
               >
                 <Disclosure.Panel className="px-4 pt-4 pb-2 text-xl md:text-2xl text-contas-pink-light">
-                  Ainda não, mas brevemente o faremos! Por enquanto estamos
-                  restritos ao Distrito Federal.
+                  Sim! O frete é de acordo com a taxa dos correios e é pago pelo cliente.
                 </Disclosure.Panel>
               </Transition>
             </>
