@@ -1,6 +1,4 @@
 import client from '../../../sanity/client';
-import SanityService from '../../../services/sanity';
-import formatMoney from '../../../utils/formatMoney';
 import { useRouter } from 'next/router';
 import Meta from '../../../components/Meta';
 import Image from 'next/image';
