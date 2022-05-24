@@ -5,7 +5,7 @@ import { useShoppingCart } from 'use-shopping-cart';
 import CartDetails from './CartDetails';
 import { ShoppingBagIcon } from '@heroicons/react/outline';
 
-const Logo = ({ navbarOpen, setNavbarOpen }) => (
+const Logo = ({ setNavbarOpen }) => (
 	<Image
 		src='https://res.cloudinary.com/jpkiyoshi/image/upload/v1636059714/Site_-_Header_-_Logo_bg4lh8.png'
 		width='106'
@@ -35,7 +35,7 @@ const Header = () => {
 	return (
 		<header className='sticky top-0 z-50 border-b bg-contas-purple-dark '>
 			<nav>
-				<div className='container flex flex-wrap items-center justify-between m-auto lg:max-w-full lg:w-11/12 lg:flex-nowrap'>
+				<div className='container relative flex flex-wrap items-center justify-between m-auto lg:max-w-full lg:w-11/12 lg:flex-nowrap'>
 					<div className='relative flex justify-between w-full py-1 lg:w-auto lg:static lg:block lg:justify-start'>
 						<Link href='/'>
 							<a className='ml-auto mr-auto'>
@@ -46,7 +46,7 @@ const Header = () => {
 							</a>
 						</Link>
 						<button
-							className='absolute right-0 block px-3 py-1 text-xl leading-none border border-transparent border-solid rounded outline-none cursor-pointer top-3 lg:hidden focus:outline-none'
+							className='absolute block px-3 py-1 text-xl leading-none border border-transparent border-solid rounded outline-none cursor-pointer right-12 top-4 lg:hidden focus:outline-none'
 							type='button'
 							onClick={() => setNavbarOpen(!navbarOpen)}
 						>
@@ -130,19 +130,21 @@ const Header = () => {
 									navbarOpen={navbarOpen}
 								/>
 							</li>
-							<button
-								onClick={() => handleCartClick()}
-								className='flex items-center gap-1 text-white'
-							>
-								<ShoppingBagIcon className='w-5' />
-								<li className='text-white'>{cartCount}</li>
-							</button>
 						</ul>
+					</div>
+					<div className='absolute top-6 right-5 lg:-right-10'>
+						<button
+							onClick={() => handleCartClick()}
+							className='flex items-center gap-1 text-white'
+						>
+							<ShoppingBagIcon className='w-5' />
+							<span className='text-white'>{cartCount}</span>
+						</button>
 					</div>
 				</div>
 			</nav>
+
 			<CartDetails showCart={shouldDisplayCart} />
-			{/* {showCart && <CartDetails />} */}
 		</header>
 	);
 };
