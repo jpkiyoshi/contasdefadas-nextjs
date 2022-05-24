@@ -7,22 +7,16 @@ import { useShoppingCart, formatCurrencyString } from 'use-shopping-cart';
 import { useEffect, useState } from 'react';
 
 const ResultPage = () => {
-	const { clearCart, cartDetails, formattedTotalPrice } = useShoppingCart();
+	const router = useRouter();
+	const { clearCart, cartDetails } = useShoppingCart();
 	const [orderCartDetails, setOrderCartDetails] = useState({});
 
-	const router = useRouter();
-	// Fetch CheckoutSession from static page via
-	// https://nextjs.org/docs/basic-features/data-fetching#static-generation
 	const { data, error } = useSWR(
 		router.query.session_id
 			? `/api/checkout_sessions/${router.query.session_id}`
 			: null,
 		fetchGetJSON
 	);
-
-	if (error) {
-		return <div>failed to load</div>;
-	}
 
 	useEffect(() => {
 		if (data) {
@@ -33,6 +27,10 @@ const ResultPage = () => {
 	useEffect(() => {
 		setOrderCartDetails({ ...cartDetails });
 	}, []);
+
+	if (error) {
+		return <div>failed to load</div>;
+	}
 
 	return (
 		<>
@@ -201,34 +199,8 @@ const ResultPage = () => {
 					</div>
 				</div>
 			</main>
-			<div className='page-container'>
-				Congrats
-				{Object.values(orderCartDetails).map(product => (
-					<h1 className='text-4xl'>{product.name}</h1>
-				))}
-				<h1>Checkout Payment Result</h1>
-				<p>
-					With the data below, you can display a custom confirmation message to
-					your customer.
-				</p>
-				<p>For example:</p>
-				<hr />
-				<h3>
-					Thank you, {data?.payment_intent.charges.data[0].billing_details.name}
-					.
-				</h3>
-				<p>
-					Confirmation email sent to{' '}
-					{data?.payment_intent.charges.data[0].billing_details.email}.
-				</p>
-				<hr />
-				<h2>Status: {data?.payment_intent?.status ?? 'loading...'}</h2>
-				<h3>CheckoutSession response:</h3>
-				<PrintObject content={data ?? 'loading...'} />
-				<Link href='/'>
-					<a>Back home</a>
-				</Link>
-			</div>
+
+			<PrintObject content={data ?? 'loading...'} />
 		</>
 	);
 };
