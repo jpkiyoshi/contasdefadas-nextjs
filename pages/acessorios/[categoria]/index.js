@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import Meta from '../../../components/Meta';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
-import formatMoney from '../../../utils/formatMoney';
 
 import SanityService from '../../../services/sanity';
 import { PaginationConfig } from '../../../utils/pagination';
@@ -11,7 +9,7 @@ import Pagination from '../../../components/Pagination';
 import { formatCurrencyString } from 'use-shopping-cart';
 
 const Product = ({ productData }) => {
-	const { name, image, description, slug, price, productSlug } = productData;
+	const { name, image, slug, price, productSlug } = productData;
 
 	return (
 		<div className='flex-col justify-center shadow-md items-left rounded-xl hover:opacity-80 bg-contas-purple-dark'>
@@ -29,7 +27,6 @@ const Product = ({ productData }) => {
 							{name}
 						</h3>
 						<p className='text-base text-gray-300'>
-							{/* {formatMoney(parseInt(price))} */}
 							{formatCurrencyString({
 								value: price,
 								currency: 'brl',
