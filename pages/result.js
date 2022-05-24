@@ -3,8 +3,12 @@ import Link from 'next/link';
 import useSWR from 'swr';
 import PrintObject from '../components/PrintObject';
 import { fetchGetJSON } from '../utils/apiHelpers';
+import { useShoppingCart } from 'use-shopping-cart';
+import { useEffect } from 'react';
 
 const ResultPage = () => {
+	const { clearCart } = useShoppingCart();
+
 	const router = useRouter();
 	// Fetch CheckoutSession from static page via
 	// https://nextjs.org/docs/basic-features/data-fetching#static-generation
@@ -18,6 +22,12 @@ const ResultPage = () => {
 	if (error) {
 		return <div>failed to load</div>;
 	}
+
+	useEffect(() => {
+		if (data) {
+			clearCart();
+		}
+	}, [data]);
 
 	return (
 		<div className='page-container'>

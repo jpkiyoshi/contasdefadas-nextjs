@@ -32,8 +32,6 @@ const Header = () => {
 
 	const [navbarOpen, setNavbarOpen] = useState(false);
 
-	console.log(shouldDisplayCart);
-
 	return (
 		<header className='sticky top-0 z-50 border-b bg-contas-purple-dark '>
 			<nav>
