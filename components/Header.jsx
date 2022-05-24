@@ -1,8 +1,8 @@
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { useShoppingCart } from 'use-shopping-cart';
+import CartSummary from './CartSummary';
 
 const Logo = ({ navbarOpen, setNavbarOpen }) => (
 	<Image
@@ -29,7 +29,8 @@ const NavBarLink = ({ linkName, href, navbarOpen, setNavbarOpen }) => (
 const Header = () => {
 	const { cartCount } = useShoppingCart();
 
-	const [navbarOpen, setNavbarOpen] = React.useState(false);
+	const [navbarOpen, setNavbarOpen] = useState(false);
+	const [showCart, setShowCart] = useState(false);
 
 	return (
 		<header className='sticky top-0 z-50 border-b bg-contas-purple-dark '>
@@ -129,11 +130,16 @@ const Header = () => {
 									navbarOpen={navbarOpen}
 								/>
 							</li>
-							<li className='text-white'>{cartCount}</li>
+							<button onClick={() => setShowCart(!showCart)}>
+								<li className='text-white'>{cartCount}</li>
+							</button>
 						</ul>
 					</div>
 				</div>
 			</nav>
+			<div className='flex justify-end text-white'>
+				{showCart && <CartSummary />}
+			</div>
 		</header>
 	);
 };
