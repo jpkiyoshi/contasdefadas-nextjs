@@ -24,7 +24,7 @@ export default function CartSummary() {
 			return;
 		}
 		//if nothing went wrong, sends user to Stripe checkout
-		redirectToCheckout({ sessionId: response.id });
+		redirectToCheckout(response.id);
 	};
 
 	return (

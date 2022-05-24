@@ -1,4 +1,4 @@
-import { validateCartItems } from 'use-shopping-cart/src/serverUtil';
+import { validateCartItems } from 'use-shopping-cart/utilities';
 import Stripe from 'stripe';
 import client from '../../../sanity/client';
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
