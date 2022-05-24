@@ -2,7 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { useShoppingCart } from 'use-shopping-cart';
-import CartSummary from './CartSummary';
+import CartDetails from './CartDetails';
+import { ShoppingBagIcon } from '@heroicons/react/outline';
 
 const Logo = ({ navbarOpen, setNavbarOpen }) => (
 	<Image
@@ -27,10 +28,11 @@ const NavBarLink = ({ linkName, href, navbarOpen, setNavbarOpen }) => (
 );
 
 const Header = () => {
-	const { cartCount } = useShoppingCart();
+	const { cartCount, shouldDisplayCart, handleCartClick } = useShoppingCart();
 
 	const [navbarOpen, setNavbarOpen] = useState(false);
-	const [showCart, setShowCart] = useState(false);
+
+	console.log(shouldDisplayCart);
 
 	return (
 		<header className='sticky top-0 z-50 border-b bg-contas-purple-dark '>
@@ -130,16 +132,19 @@ const Header = () => {
 									navbarOpen={navbarOpen}
 								/>
 							</li>
-							<button onClick={() => setShowCart(!showCart)}>
+							<button
+								onClick={() => handleCartClick()}
+								className='flex items-center gap-1 text-white'
+							>
+								<ShoppingBagIcon className='w-5' />
 								<li className='text-white'>{cartCount}</li>
 							</button>
 						</ul>
 					</div>
 				</div>
 			</nav>
-			<div className='flex justify-end text-white'>
-				{showCart && <CartSummary />}
-			</div>
+			<CartDetails showCart={shouldDisplayCart} />
+			{/* {showCart && <CartDetails />} */}
 		</header>
 	);
 };
