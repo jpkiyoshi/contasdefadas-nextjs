@@ -191,9 +191,9 @@ export default function CartDetails({ showCart }) {
 												<p>Subtotal</p>
 												<p>{formattedTotalPrice}</p>
 											</div>
-											<p className='mt-0.5 text-sm text-white'>
+											{/* <p className='mt-0.5 text-sm text-white'>
 												Shipping and taxes calculated at checkout.
-											</p>
+											</p> */}
 											<div className='mt-6'>
 												<button
 													disabled={cartEmpty || loading}

@@ -3,19 +3,24 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	height: 100%;
+}
+
+body {
+	height: 100%;
 }
 
 @media screen and (max-width: 1024px) {
-  .container {
-      padding-left: 1rem;
-      padding-right: 1rem;
-  }
+	.container {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 }
 
 @media (min-width: 1025px) {
-  .container {
-      max-width: 75%;
-  }
+	.container {
+		max-width: 75%;
+	}
 }
