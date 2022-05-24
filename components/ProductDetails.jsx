@@ -2,11 +2,12 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { useShoppingCart, formatCurrencyString } from 'use-shopping-cart';
 import Meta from './Meta';
+import CartDetails from './CartDetails';
 
 const ProductDetails = ({ productData }) => {
 	const { category, description, image, name, price, id } = productData;
 	const router = useRouter();
-	const { addItem, removeItem } = useShoppingCart();
+	const { addItem, removeItem, shouldDisplayCart, handleCartClick } = useShoppingCart();
 
 	const productDataForStripe = {
 		...productData,
@@ -49,7 +50,7 @@ const ProductDetails = ({ productData }) => {
 										currency: 'brl',
 									})}
 								</span>
-								<a
+								{/* <a
 									rel='noreferrer'
 									target='_blank'
 									href={`https://api.whatsapp.com/send?phone=5561984830443&text=Olá, gostaria de comprar o acessório ${name}, de ${formatCurrencyString(
@@ -61,15 +62,21 @@ const ProductDetails = ({ productData }) => {
 									className='flex justify-center px-6 py-2 text-white bg-green-700 border-0 rounded focus:outline-none hover:bg-green-600'
 								>
 									Comprar por whatsapp
-								</a>
-								<button onClick={() => addItem(productDataForStripe)}>
-									Add to cart
+								</a> */}
+								<button
+									className='flex justify-center px-6 py-2 text-white bg-green-700 border-0 rounded focus:outline-none hover:bg-green-600'
+									onClick={() => {
+										addItem(productDataForStripe);
+										handleCartClick();
+									}}
+								>
+									Adicionar à sacola
 								</button>
-								<button onClick={() => removeItem(id)}>Remove</button>
 							</div>
 						</div>
 					</div>
 				</div>
+				<CartDetails showCart={shouldDisplayCart} />
 			</section>
 		</>
 	);

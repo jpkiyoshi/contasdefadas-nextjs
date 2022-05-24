@@ -72,7 +72,7 @@ export default function CartDetails({ showCart }) {
 											<div className='flex items-start justify-between'>
 												<Dialog.Title className='text-lg font-medium text-white'>
 													{' '}
-													Sacola{' '}
+													Minha sacola{' '}
 												</Dialog.Title>
 												<div className='flex items-center ml-3 h-7'>
 													<button
