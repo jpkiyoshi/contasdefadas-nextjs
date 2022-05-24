@@ -22,6 +22,7 @@ const ProductDetails = ({ productData }) => {
 					<div className='flex flex-wrap mx-auto lg:w-4/5'>
 						<div className='w-full lg:w-1/2'>
 							<Image
+								alt={description}
 								src={image}
 								width='100%'
 								height='100%'
