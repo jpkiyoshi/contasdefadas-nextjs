@@ -1,7 +1,6 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useState, useEffect } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { XIcon } from '@heroicons/react/outline';
+import { XIcon, ShoppingBagIcon } from '@heroicons/react/outline';
 import { PlusCircleIcon, MinusCircleIcon } from '@heroicons/react/solid';
 import { useShoppingCart } from 'use-shopping-cart';
 import { fetchPostJSON } from '../utils/apiHelpers';
@@ -26,16 +25,13 @@ export default function CartDetails({ showCart }) {
 	useEffect(() => setOpen(showCart), [showCart]);
 
 	const handleCheckout = async () => {
-		// event.preventDefault();
 		setLoading(true);
-		//send the cart data to our serverless API
 		const response = await fetchPostJSON('/api/checkout_sessions/cart', cartDetails);
 
 		if (response.statusCode === 500) {
 			console.error(response.message);
 			return;
 		}
-		//if nothing went wrong, sends user to Stripe checkout
 		redirectToCheckout(response.id);
 	};
 
@@ -96,12 +92,14 @@ export default function CartDetails({ showCart }) {
 
 											<div className='mt-8'>
 												<div className='flow-root'>
-													<ul
-														role='list'
-														className='-my-6 divide-y divide-gray-200'
-													>
-														{Object.values(cartDetails).map(
-															product => (
+													{cartCount > 0 ? (
+														<ul
+															role='list'
+															className='-my-6 divide-y divide-gray-200'
+														>
+															{Object.values(
+																cartDetails
+															).map(product => (
 																<li
 																	key={product.id}
 																	className='flex py-6'
@@ -179,9 +177,16 @@ export default function CartDetails({ showCart }) {
 																		</div>
 																	</div>
 																</li>
-															)
-														)}
-													</ul>
+															))}
+														</ul>
+													) : (
+														<div className='flex flex-col items-center justify-center text-white '>
+															<h1>Sua sacola está vazia</h1>
+															<div className='w-44'>
+																<ShoppingBagIcon />
+															</div>
+														</div>
+													)}
 												</div>
 											</div>
 										</div>
