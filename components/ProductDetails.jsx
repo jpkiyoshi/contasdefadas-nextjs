@@ -6,7 +6,7 @@ import Meta from './Meta';
 const ProductDetails = ({ productData }) => {
 	const { category, description, image, name, price } = productData;
 	// const router = useRouter();
-	const { addItem, shouldDisplayCart, handleCartClick } = useShoppingCart();
+	const { addItem, handleCartClick } = useShoppingCart();
 
 	const productDataForStripe = {
 		...productData,
