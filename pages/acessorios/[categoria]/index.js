@@ -68,7 +68,6 @@ const Product = ({ productData }) => {
 };
 
 const ProductShelf = ({ products }) => {
-	console.log(products);
 	return (
 		<section className='grid grid-cols-1 mt-8 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
 			{products.map(product => (

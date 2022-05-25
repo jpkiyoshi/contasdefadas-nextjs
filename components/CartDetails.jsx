@@ -1,7 +1,7 @@
 import { Fragment, useState, useEffect } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { XIcon, ShoppingBagIcon } from '@heroicons/react/outline';
-import { PlusCircleIcon, MinusCircleIcon } from '@heroicons/react/solid';
+import { PlusIcon, MinusIcon } from '@heroicons/react/solid';
 import { useShoppingCart } from 'use-shopping-cart';
 import { fetchPostJSON } from '../utils/apiHelpers';
 
@@ -136,23 +136,23 @@ export default function CartDetails({ showCart }) {
 																				}
 																			</p>
 																		</div>
-																		<div className='flex items-end justify-between flex-1 mt-2 text-sm'>
+																		<div className='flex items-end justify-between flex-1 mt-4 text-sm'>
 																			<div className='flex'>
-																				<MinusCircleIcon
-																					className='w-4 text-white cursor-pointer'
+																				<MinusIcon
+																					className='w-5 text-black bg-white border rounded cursor-pointer'
 																					onClick={() =>
 																						decrementItem(
 																							product.id
 																						)
 																					}
 																				/>
-																				<p className='px-2 mx-1 font-bold text-black border rounded bg-contas-pink-light'>
+																				<p className='px-2 mx-1 font-bold text-black bg-white border rounded'>
 																					{
 																						product.quantity
 																					}
 																				</p>
-																				<PlusCircleIcon
-																					className='w-4 text-white cursor-pointer'
+																				<PlusIcon
+																					className='w-5 text-black bg-white border rounded cursor-pointer'
 																					onClick={() =>
 																						incrementItem(
 																							product.id
