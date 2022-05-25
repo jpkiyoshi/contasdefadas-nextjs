@@ -8,7 +8,7 @@ const createProductQuery = () => {
 const getCategoryQueryString = category => {
 	return `*[_type == "acessorio" && categoria._ref in 
         *[slug.current == "${category}"]._id] | order(_createdAt desc) {
-        _id,
+        "id": _id,
         "name": nome,
         "category": categoria->categoria,
         "slug": categoria->slug.current,

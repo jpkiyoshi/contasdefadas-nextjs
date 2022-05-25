@@ -1,13 +1,12 @@
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { useShoppingCart, formatCurrencyString } from 'use-shopping-cart';
 import Meta from './Meta';
-import CartDetails from './CartDetails';
 
 const ProductDetails = ({ productData }) => {
-	const { category, description, image, name, price, id } = productData;
-	const router = useRouter();
-	const { addItem, removeItem, shouldDisplayCart, handleCartClick } = useShoppingCart();
+	const { category, description, image, name, price } = productData;
+	// const router = useRouter();
+	const { addItem, shouldDisplayCart, handleCartClick } = useShoppingCart();
 
 	const productDataForStripe = {
 		...productData,
@@ -76,7 +75,6 @@ const ProductDetails = ({ productData }) => {
 						</div>
 					</div>
 				</div>
-				<CartDetails showCart={shouldDisplayCart} />
 			</section>
 		</>
 	);

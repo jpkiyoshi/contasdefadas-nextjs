@@ -9,7 +9,7 @@ import Pagination from '../../../components/Pagination';
 import { formatCurrencyString } from 'use-shopping-cart';
 
 const Product = ({ productData }) => {
-	const { name, image, slug, price, productSlug } = productData;
+	const { name, image, slug, price, productSlug, id } = productData;
 
 	return (
 		<div className='flex-col justify-center shadow-md items-left rounded-xl hover:opacity-80 bg-contas-purple-dark'>
