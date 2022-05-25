@@ -132,7 +132,7 @@ const Header = () => {
 							</li>
 						</ul>
 					</div>
-					<div className='absolute top-6 right-5 lg:-right-10'>
+					<div className='absolute px-2 py-1 rounded-full bg-contas-pink-dark top-5 right-5 lg:-right-12 hover:scale-105'>
 						<button
 							onClick={() => handleCartClick()}
 							className='flex items-center gap-1 text-white'
