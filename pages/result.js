@@ -42,7 +42,7 @@ const ResultPage = () => {
         <body class="h-full">
         ```
       */}
-			<main className='relative lg:min-h-full'>
+			<main className='relative lg:min-h-full bg-contas-pink-light'>
 				<div className='overflow-hidden h-80 lg:absolute lg:w-1/2 lg:h-full lg:pr-4 xl:pr-12'>
 					<img
 						src='https://tailwindui.com/img/ecommerce-images/confirmation-page-06-hero.jpg'
@@ -54,10 +54,10 @@ const ResultPage = () => {
 				<div>
 					<div className='max-w-2xl px-4 py-16 mx-auto sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:py-32 lg:grid lg:grid-cols-2 lg:gap-x-8 xl:gap-x-24'>
 						<div className='lg:col-start-2'>
-							<h1 className='text-sm font-medium text-indigo-600'>
+							<h1 className='text-sm font-medium text-black'>
 								Pagamento bem sucedido
 							</h1>
-							<p className='mt-2 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl'>
+							<p className='mt-2 text-4xl font-extrabold tracking-tight text-contas-purple-dark sm:text-5xl'>
 								Obrigado por comprar conosco,{' '}
 								{
 									data?.payment_intent.charges.data[0].billing_details
@@ -65,7 +65,7 @@ const ResultPage = () => {
 								}
 								!
 							</p>
-							<p className='mt-2 text-base text-gray-500'>
+							<p className='mt-2 text-base text-black'>
 								Agradecemos a sua compra, estamos aguardando a confirmação
 								do pagamento. Enviaremos um e-mail com detalhes da compra
 								para{' '}
@@ -97,10 +97,12 @@ const ResultPage = () => {
 											className='flex-none object-cover object-center w-24 h-24 bg-gray-100 rounded-md'
 										/>
 										<div className='flex-auto space-y-1'>
-											<h3 className='text-gray-900'>
+											<h3 className='text-contas-purple-dark'>
 												<a href={product.href}>{product.name}</a>
 											</h3>
-											<p>{product.description}</p>
+											<p className='text-black'>
+												{product.description}
+											</p>
 											<p>Quantidade: {product.quantity}</p>
 										</div>
 										<p className='flex-none font-medium text-gray-900'>
@@ -137,9 +139,9 @@ const ResultPage = () => {
 								</div>
 							</dl>
 
-							<dl className='grid grid-cols-2 mt-16 text-sm text-gray-600 gap-x-4'>
+							<dl className='grid grid-cols-2 mt-16 text-sm text-black gap-x-4'>
 								<div>
-									<dt className='font-medium text-gray-900'>
+									<dt className='font-bold text-contas-purple-dark'>
 										Endereço de envio
 									</dt>
 									<dd className='mt-2'>
@@ -189,7 +191,7 @@ const ResultPage = () => {
 
 							<div className='py-6 mt-16 text-right border-t border-gray-200'>
 								<Link href='/'>
-									<div className='text-sm font-medium text-indigo-600 cursor-pointer hover:text-indigo-500'>
+									<div className='text-sm font-medium cursor-pointer text-contas-purple-dark hover:text-contas-pink-dark'>
 										Continuar comprando
 										<span aria-hidden='true'> &rarr;</span>
 									</div>
@@ -200,7 +202,7 @@ const ResultPage = () => {
 				</div>
 			</main>
 
-			<PrintObject content={data ?? 'loading...'} />
+			{/* <PrintObject content={data ?? 'loading...'} /> */}
 		</>
 	);
 };

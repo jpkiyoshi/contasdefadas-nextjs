@@ -203,7 +203,7 @@ export default function CartDetails({ showCart }) {
 												<button
 													disabled={cartEmpty || loading}
 													onClick={() => handleCheckout()}
-													className='flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm cursor-pointer hover:bg-indigo-700 disabled:opacity-50'
+													className='flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white bg-green-700 border border-transparent rounded-md shadow-sm cursor-pointer hover:bg-green-900 disabled:opacity-50'
 												>
 													Checkout
 												</button>
@@ -213,7 +213,7 @@ export default function CartDetails({ showCart }) {
 													ou{' '}
 													<button
 														type='button'
-														className='font-medium text-indigo-600 hover:text-indigo-500'
+														className='font-medium text-contas-pink-light hover:text-contas-pink-dark'
 														onClick={() => {
 															setOpen(false);
 															handleCartClick();
