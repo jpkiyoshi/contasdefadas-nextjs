@@ -22,10 +22,12 @@ const ResultPage = () => {
 		if (data) {
 			clearCart();
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [data]);
 
 	useEffect(() => {
 		setOrderCartDetails({ ...cartDetails });
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	if (error) {
@@ -190,7 +192,7 @@ const ResultPage = () => {
 							</dl>
 
 							<div className='py-6 mt-16 text-right border-t border-gray-200'>
-								<Link href='/'>
+								<Link href='/' passHref>
 									<div className='text-sm font-medium cursor-pointer text-contas-purple-dark hover:text-contas-pink-dark'>
 										Continuar comprando
 										<span aria-hidden='true'> &rarr;</span>

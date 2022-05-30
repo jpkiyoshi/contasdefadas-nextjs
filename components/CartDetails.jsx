@@ -4,6 +4,7 @@ import { XIcon, ShoppingBagIcon } from '@heroicons/react/outline';
 import { PlusIcon, MinusIcon } from '@heroicons/react/solid';
 import { useShoppingCart } from 'use-shopping-cart';
 import { fetchPostJSON } from '../utils/apiHelpers';
+import Image from 'next/image';
 
 export default function CartDetails({ showCart }) {
 	const [open, setOpen] = useState(false);
@@ -104,8 +105,9 @@ export default function CartDetails({ showCart }) {
 																	key={product.id}
 																	className='flex py-6'
 																>
-																	<div className='flex-shrink-0 w-24 h-24 overflow-hidden border border-gray-200 rounded-md'>
-																		<img
+																	<div className='relative flex-shrink-0 w-24 h-24 overflow-hidden border border-gray-200 rounded-md'>
+																		<Image
+																			layout='fill'
 																			src={
 																				product.image
 																			}
