@@ -19,16 +19,12 @@ const ResultPage = () => {
 	);
 
 	useEffect(() => {
-		if (data) {
-			clearCart();
+		if (Object.keys(cartDetails).length === 0 && cartDetails.constructor === Object) {
+			return;
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [data]);
-
-	useEffect(() => {
 		setOrderCartDetails({ ...cartDetails });
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+		clearCart();
+	}, [cartDetails, clearCart, orderCartDetails]);
 
 	if (error) {
 		return <div>failed to load</div>;
@@ -36,18 +32,11 @@ const ResultPage = () => {
 
 	return (
 		<>
-			{/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-white">
-        <body class="h-full">
-        ```
-      */}
 			<main className='relative lg:min-h-full bg-contas-pink-light'>
 				<div className='overflow-hidden h-80 lg:absolute lg:w-1/2 lg:h-full lg:pr-4 xl:pr-12'>
+					{/* eslint-disable-next-line @next/next/no-img-element */}
 					<img
-						src='https://tailwindui.com/img/ecommerce-images/confirmation-page-06-hero.jpg'
+						src='https://res.cloudinary.com/jpkiyoshi/image/upload/v1648420725/Homepage-contas-de-fadas/Colar_myjjrk.png'
 						alt='TODO'
 						className='object-cover object-center w-full h-full'
 					/>
@@ -80,12 +69,12 @@ const ResultPage = () => {
 								assim que confirmarmos.
 							</p>
 
-							<dl className='mt-16 text-sm font-medium'>
+							{/* <dl className='mt-16 text-sm font-medium'>
 								<dt className='text-gray-900'>Tracking number</dt>
 								<dd className='mt-2 text-indigo-600'>
 									51547878755545848512
 								</dd>
-							</dl>
+							</dl> */}
 
 							<ul
 								role='list'
@@ -93,6 +82,7 @@ const ResultPage = () => {
 							>
 								{Object.values(orderCartDetails).map(product => (
 									<li key={product.id} className='flex py-6 space-x-6'>
+										{/* eslint-disable-next-line @next/next/no-img-element */}
 										<img
 											src={product.image}
 											alt={product.description}
@@ -105,7 +95,9 @@ const ResultPage = () => {
 											<p className='text-black'>
 												{product.description}
 											</p>
-											<p>Quantidade: {product.quantity}</p>
+											<p className='text-contas-pink-dark'>
+												Quantidade: {product.quantity}
+											</p>
 										</div>
 										<p className='flex-none font-medium text-gray-900'>
 											{product.formattedValue}
@@ -116,18 +108,18 @@ const ResultPage = () => {
 
 							<dl className='pt-6 space-y-6 text-sm font-medium text-gray-500 border-t border-gray-200'>
 								<div className='flex justify-between'>
-									<dt>Subtotal</dt>
-									<dd className='text-gray-900'></dd>
+									<dt className='text-black'>Subtotal</dt>
+									<dd className='text-gray-900'>
+										{formatCurrencyString({
+											value: data?.amount_total,
+											currency: 'brl',
+										})}
+									</dd>
 								</div>
 
 								<div className='flex justify-between'>
-									<dt>Shipping</dt>
+									<dt className='text-black'>Frete</dt>
 									<dd className='text-gray-900'>$8.00</dd>
-								</div>
-
-								<div className='flex justify-between'>
-									<dt>Taxes</dt>
-									<dd className='text-gray-900'>$6.40</dd>
 								</div>
 
 								<div className='flex items-center justify-between pt-6 text-gray-900 border-t border-gray-200'>
