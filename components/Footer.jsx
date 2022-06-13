@@ -7,26 +7,26 @@ const Footer = () => {
 			<div className='max-w-screen-xl py-12 mx-auto space-y-8 overflow-hidden sm:px-16 lg:px-16'>
 				<nav className='flex flex-wrap justify-center gap-10 -mx-5 -my-2x'>
 					<div className='flex flex-col items-center'>
-						<h3 className='text-base font-semibold leading-6 uppercase text-opacity-70 text-contas-pink-light'>
+						<h3 className='text-base font-semibold leading-6 uppercase text-contas-pink-light/70'>
 							Informação
 						</h3>
 						<div className='mt-4'>
 							<Link href={'/quem-somos'}>
-								<a className='text-base leading-6 text-opacity-70 text-contas-pink-light hover:text-opacity-100'>
+								<a className='text-base leading-6 text-contas-pink-light/70 hover:text-contas-pink-light'>
 									Quem somos
 								</a>
 							</Link>
 						</div>
 						<div>
 							<Link href={'/perguntas-frequentes'}>
-								<a className='text-base leading-6 text-opacity-70 text-contas-pink-light hover:text-opacity-100'>
+								<a className='text-base leading-6 text-contas-pink-light/70 hover:text-contas-pink-light'>
 									Perguntas Frequentes
 								</a>
 							</Link>
 						</div>
 					</div>
 					<div className='flex flex-col items-center mx-14'>
-						<h3 className='text-base font-semibold leading-6 uppercase text-opacity-70 text-contas-pink-light'>
+						<h3 className='text-base font-semibold leading-6 uppercase text-contas-pink-light/70'>
 							Contato
 						</h3>
 						<div className='mt-4'>
@@ -42,7 +42,7 @@ const Footer = () => {
 										<path d='M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z' />
 									</svg>
 								</div>
-								<p className='inline text-base leading-6 underline text-opacity-70 text-contas-pink-light hover:text-opacity-100'>
+								<p className='inline text-base leading-6 underline text-contas-pink-light/70 hover:text-contas-pink-light'>
 									<a href='mailto:lojacontasdefadas@gmail.com'>
 										lojacontasdefadas@gmail.com
 									</a>
@@ -51,7 +51,7 @@ const Footer = () => {
 						</div>
 					</div>
 					<div className='flex flex-col items-center'>
-						<h3 className='text-base font-semibold leading-6 uppercase text-opacity-70 text-contas-pink-light'>
+						<h3 className='text-base font-semibold leading-6 uppercase text-contas-pink-light/70'>
 							Formas de Pagamento
 						</h3>
 						<AcceptedPayments />
@@ -62,7 +62,7 @@ const Footer = () => {
 						rel='noreferrer'
 						target='_blank'
 						href='https://www.instagram.com/contasdefadas/'
-						className='text-contas-pink-light text-opacity-70 hover:text-opacity-100'
+						className='text-contas-pink-light/70 hover:text-contas-pink-light'
 					>
 						<span className='sr-only'>Instagram</span>
 						<svg
@@ -79,7 +79,7 @@ const Footer = () => {
 						</svg>
 					</a>
 				</div>
-				<p className='mt-8 text-base leading-6 text-center text-opacity-70 text-contas-pink-light'>
+				<p className='mt-8 text-base leading-6 text-center text-contas-pink-light/70'>
 					Contas de Fadas © 2022. Todos os direitos reservados.
 				</p>
 			</div>

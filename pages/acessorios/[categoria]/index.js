@@ -32,7 +32,7 @@ const Product = ({ productData }) => {
 						</div>
 						<div className='relative mt-4'>
 							<h3 className='text-sm font-medium text-gray-900'>{name}</h3>
-							<p className='mt-1 overflow-hidden text-sm font-medium text-contas-pink-dark overflow-ellipsis whitespace-nowrap'>
+							<p className='mt-1 overflow-hidden text-sm font-medium text-contas-pink-dark text-ellipsis whitespace-nowrap'>
 								{description}
 							</p>
 						</div>

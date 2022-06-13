@@ -61,7 +61,7 @@ const Header = () => {
 						</button>
 					</div>
 					<div
-						className={`lg:flex flex-grow items-center ${
+						className={`lg:flex grow items-center ${
 							navbarOpen ? ' flex' : ' hidden'
 						}`}
 					>

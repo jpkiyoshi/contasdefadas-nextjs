@@ -48,7 +48,7 @@ export default function CartDetails({ showCart }) {
 					leaveFrom='opacity-100'
 					leaveTo='opacity-0'
 				>
-					<div className='fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75' />
+					<div className='fixed inset-0 transition-opacity bg-gray-500/75' />
 				</Transition.Child>
 
 				<div className='fixed inset-0 overflow-hidden'>
@@ -56,10 +56,10 @@ export default function CartDetails({ showCart }) {
 						<div className='fixed inset-y-0 right-0 flex max-w-full pl-10 pointer-events-none'>
 							<Transition.Child
 								as={Fragment}
-								enter='transform transition ease-in-out duration-500 sm:duration-700'
+								enter='transition ease-in-out duration-500 sm:duration-700'
 								enterFrom='translate-x-full'
 								enterTo='translate-x-0'
-								leave='transform transition ease-in-out duration-500 sm:duration-700'
+								leave='transition ease-in-out duration-500 sm:duration-700'
 								leaveFrom='translate-x-0'
 								leaveTo='translate-x-full'
 							>
@@ -105,7 +105,7 @@ export default function CartDetails({ showCart }) {
 																	key={product.id}
 																	className='flex py-6'
 																>
-																	<div className='relative flex-shrink-0 w-24 h-24 overflow-hidden border border-gray-200 rounded-md'>
+																	<div className='relative w-24 h-24 overflow-hidden border border-gray-200 rounded-md shrink-0'>
 																		<Image
 																			layout='fill'
 																			src={
@@ -205,7 +205,7 @@ export default function CartDetails({ showCart }) {
 												<button
 													disabled={cartEmpty || loading}
 													onClick={() => handleCheckout()}
-													className='flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white bg-green-700 border border-transparent rounded-md shadow-sm cursor-pointer hover:bg-green-900 disabled:opacity-50'
+													className='flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white bg-green-700 border border-transparent rounded-md shadow-sm cursor-pointer hover:bg-green-900 disabled:bg-green-700/50'
 												>
 													Checkout
 												</button>

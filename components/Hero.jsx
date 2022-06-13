@@ -1,25 +1,25 @@
 import HeroBackground from './HeroBackground';
 
 const Hero = () => {
-  return (
-    <HeroBackground>
-      <div className="p-6 mt-20 md:mt-0 md:p-10">
-        <h1 className="text-6xl font-extrabold leading-none mb-7 md:text-7xl text-contas-purple-dark">
-          Trazemos a magia até você
-        </h1>
-        <p className="text-3xl leading-9 md:text-center text-contas-purple-dark">
-          Acessórios artesanais feitos com dedicação, cuidado e muito amor
-        </p>
-      </div>
+	return (
+		<HeroBackground>
+			<div className='p-6 mt-20 md:mt-0 md:p-10'>
+				<h1 className='text-6xl font-extrabold leading-none mb-7 md:text-7xl text-contas-purple-dark'>
+					Trazemos a magia até você
+				</h1>
+				<p className='text-3xl leading-9 md:text-center text-contas-purple-dark'>
+					Acessórios artesanais feitos com dedicação, cuidado e muito amor
+				</p>
+			</div>
 
-      <a
-        href="#acessorios"
-        className="px-6 py-4 mb-32 text-lg font-bold text-white rounded md:mb-9 lg:text-2xl text-opacity-80 bg-contas-purple-dark hover:bg-contas-pink-dark"
-      >
-        Veja nossos produtos
-      </a>
-    </HeroBackground>
-  );
+			<a
+				href='#acessorios'
+				className='px-6 py-4 mb-32 text-lg font-bold rounded text-white/80 md:mb-9 lg:text-2xl bg-contas-purple-dark hover:bg-contas-pink-dark'
+			>
+				Veja nossos produtos
+			</a>
+		</HeroBackground>
+	);
 };
 
 export default Hero;
